@@ -38,6 +38,7 @@ public class UIManager : MonoBehaviour
                 calibrate.gameObject.SetActive(false);
                 break;
             case GameManager.states.game:
+            case GameManager.states.game_paused:
                 intro.gameObject.SetActive(false);
                 game.gameObject.SetActive(true);
                 calibrate.gameObject.SetActive(false);

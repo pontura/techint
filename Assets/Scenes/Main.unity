@@ -2058,6 +2058,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6ead5917c4236ed47a6c2a0ba8a482db, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ui: {fileID: 1696610048}
   field: {fileID: 685052350}
   state: 0
   levelId: 0

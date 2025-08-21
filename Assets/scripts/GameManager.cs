@@ -7,7 +7,7 @@ using YaguarLib.Audio;
 
 public class GameManager : MonoBehaviour
 {
-    GameUI ui;
+    [SerializeField] GameUI ui;
     [SerializeField] TMPro.TMP_Text field;
     InputManager inputManager;
     public states state;
@@ -44,7 +44,6 @@ public class GameManager : MonoBehaviour
     }
     void Awake()
     {
-        ui = GetComponent<GameUI>();
         inputManager = GetComponent<InputManager>();
         if (!mInstance)
             mInstance = this;
@@ -139,10 +138,13 @@ public class GameManager : MonoBehaviour
     public void InitGame()
     {
         levelId = 0;
-        ui.SetGamePlay(levelId);
+        ui.Restart();
         field.gameObject.SetActive(false);
-        //Cursor.visible = false;
+#if !UNITY_EDITOR
+        Cursor.visible = false;
+#endif
         state = states.game_paused;
+        uiManager.SetScreen(state);
     }
     public void NextGame()
     {

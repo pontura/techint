@@ -11,12 +11,10 @@ public class LevelSignal : MonoBehaviour
         lose
     }
     Animator anim;
-    private void Awake()
-    {
-        anim = GetComponent<Animator>();
-    }
     public void SetState(states state)
     {
+        if(anim==null)
+            anim = GetComponent<Animator>();
         anim.Play(state.ToString());
     }
 }
