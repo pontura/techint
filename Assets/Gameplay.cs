@@ -2,12 +2,12 @@ using UnityEngine;
 
 public class Gameplay : MonoBehaviour
 {
-    public void SetOn()
+    public void SetOn(bool isOn)
     {
-        gameObject.SetActive(true);
-    }
-    public void SetOff()
+        gameObject.SetActive(isOn);
+    }    
+    public void InitGame()
     {
-        gameObject.SetActive(false);
+        Debug.Log("init");
     }
 }

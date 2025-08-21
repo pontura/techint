@@ -1,5 +1,10 @@
 {
-	"totalTime":150,		
+	"time_game_1":30,	
+	"time_game_2":30,	
+	"time_game_3":30,		
+	"delay_to_read_gameTitle":3,	
+	"timeOverDuration":2,	
+	"timeOver": "¡Tiempo!",
 	"intro_title": "Bienvenidos!",
 	"level_1_title": "Construí la planta energética",
 	"level_2_title": "Armemos el ducto!",	

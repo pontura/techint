@@ -20,15 +20,6 @@ public class GameManager : MonoBehaviour
         summary,
         game_paused
     }
-    [Serializable]
-    public class SettingsData
-    {
-        public int totalTime;
-        public string intro_title;
-        public string level_1_title;
-        public string level_2_title;
-        public string level_3_title;
-    }
 
     static GameManager mInstance = null;
     [SerializeField] UIManager uiManager;
@@ -44,6 +35,7 @@ public class GameManager : MonoBehaviour
     }
     void Awake()
     {
+        settings = new SettingsData();
         inputManager = GetComponent<InputManager>();
         if (!mInstance)
             mInstance = this;
@@ -146,6 +138,10 @@ public class GameManager : MonoBehaviour
         state = states.game_paused;
         uiManager.SetScreen(state);
     }
+    public void GameTutorialDone()
+    {
+        state = states.game;
+    }
     public void NextGame()
     {
         levelId ++;
@@ -182,6 +178,9 @@ public class GameManager : MonoBehaviour
     }
     private void TimeOver()
     {
+        string text = settings.timeOver;
+        int duration = settings.timeOverDuration;
+        Events.OnSignal(text, duration, NextGame);
         Summary();
     }
     void EndGame()

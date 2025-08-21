@@ -24,6 +24,9 @@ public class UIManager : MonoBehaviour
                 break;
             case GameManager.states.summary:
                 break;
+            case GameManager.states.game:
+                game.OnUpdate();
+                break;
             default:
                 break;
         }
@@ -42,7 +45,6 @@ public class UIManager : MonoBehaviour
                 intro.gameObject.SetActive(false);
                 game.gameObject.SetActive(true);
                 calibrate.gameObject.SetActive(false);
-                game.Restart();
                 break;
             case GameManager.states.calibrate:
                 intro.gameObject.SetActive(false);

@@ -1,19 +1,18 @@
 using UnityEngine;
 using YaguarLib.UI;
-using static UnityEngine.Rendering.DebugUI;
 
 public class TimerUI : MonoBehaviour
 {
-    [SerializeField] TMPro.TMP_Text field;
-    [SerializeField] TMPro.TMP_Text field2;
-    [SerializeField] ProgressBar progressBar;
+    [SerializeField] TMPro.TMP_Text[] fields;
+    [SerializeField] ProgressBar[] progressBars;
     [SerializeField] float totalTime;
     [SerializeField] float timer = 0;
 
     public void Restart()
     {
-        this.totalTime = GameManager.Instance.settings.totalTime;
+        this.totalTime = GameManager.Instance.settings.GetTime(GameManager.Instance.levelId);
         timer = totalTime;
+        SetField();
     }
     public void OnUpdate()
     {
@@ -27,9 +26,10 @@ public class TimerUI : MonoBehaviour
     }
     void SetField()
     {
-        field.text = YaguarLib.Xtras.Utils.FormatTime(timer);
-        field2.text = YaguarLib.Xtras.Utils.FormatTime(timer);
+        foreach (var field in fields)
+            field.text = YaguarLib.Xtras.Utils.FormatTime(timer);
 
-        progressBar.SetValue(timer/ totalTime);
+        foreach (ProgressBar progressBar in progressBars)
+            progressBar.SetValue(timer/ totalTime);
     }
 }

@@ -430,10 +430,14 @@ namespace YaguarLib.Xtras
         {
             System.TimeSpan time = System.TimeSpan.FromSeconds(timeInSeconds);
 
-            string formatted = string.Format("{0:D2}:{1:D2}",
-                time.Minutes,
-                time.Seconds
-            );
+            string formatted = string.Format("{0:D2}",
+               time.Seconds
+           );
+
+            //string formatted = string.Format("{0:D2}:{1:D2}",
+            //    time.Minutes,
+            //    time.Seconds
+            //);
 
             return formatted; // Output: 01:01:01
         }
