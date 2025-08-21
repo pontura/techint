@@ -1,9 +1,9 @@
 using UnityEngine;
-using UnityEngine.SocialPlatforms.Impl;
 
 public class GameUI : MonoBehaviour
 {
-
+    [SerializeField] Gameplay[] gameplays;
+    
     ScoreUI scoreUI;
     TimerUI timerUI;
 
@@ -16,10 +16,14 @@ public class GameUI : MonoBehaviour
     {
         scoreUI.Restart();
         timerUI.Restart();
+        SetGamePlay(0);
     }
-    public int GetScore()
+    public void SetGamePlay(int levelID)
     {
-        return scoreUI.score;
+        foreach (Gameplay g in gameplays)
+            g.SetOff();
+        gameplays[levelID].SetOn();
+        scoreUI.SetAciveState(levelID);
     }
     public void OnUpdate()
     {

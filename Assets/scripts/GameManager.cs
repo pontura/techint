@@ -7,17 +7,15 @@ using YaguarLib.Audio;
 
 public class GameManager : MonoBehaviour
 {
-
+    GameUI ui;
     [SerializeField] TMPro.TMP_Text field;
     InputManager inputManager;
     public states state;
-
+    public int levelId = 0;
     public enum states
     {
         intro,
-        game1,
-        game2,
-        game3,
+        game,
         calibrate,
         summary,
         game_paused
@@ -46,6 +44,7 @@ public class GameManager : MonoBehaviour
     }
     void Awake()
     {
+        ui = GetComponent<GameUI>();
         inputManager = GetComponent<InputManager>();
         if (!mInstance)
             mInstance = this;
@@ -54,14 +53,10 @@ public class GameManager : MonoBehaviour
         Events.LevelComplete += LevelComplete;
     }
 
-    private void LevelComplete()
+    private void LevelComplete(int winner)
     {
         StopAllCoroutines();
         state = states.game_paused;
-    }
-    void OnInitLevel()
-    {
-        state = states.game1;
     }
     private void OnDestroy()
     {
@@ -143,9 +138,17 @@ public class GameManager : MonoBehaviour
     }
     public void InitGame()
     {
+        levelId = 0;
+        ui.SetGamePlay(levelId);
         field.gameObject.SetActive(false);
-        Cursor.visible = false;
+        //Cursor.visible = false;
         state = states.game_paused;
+    }
+    public void NextGame()
+    {
+        levelId ++;
+        ui.SetGamePlay(levelId);
+
     }
     void OnNext()
     {
@@ -170,7 +173,7 @@ public class GameManager : MonoBehaviour
     {
         if (state == states.calibrate)
             CalibrationDone();
-        else if (state == states.game1 || state == states.game2 || state == states.game3)
+        else if (state == states.game)
             EndGame();
         else if (state == states.summary)
             Intro();
