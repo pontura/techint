@@ -6,7 +6,7 @@ public class Gameplay : MonoBehaviour
     {
         gameObject.SetActive(isOn);
     }    
-    public void InitGame()
+    public virtual void InitGame()
     {
         Debug.Log("init");
     }

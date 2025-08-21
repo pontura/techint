@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class GameUI : MonoBehaviour
 {
-    [SerializeField] Gameplay[] gameplays;
+    [SerializeField] GameplayManager gameplayManager;
     
     ScoreUI scoreUI;
     TimerUI timerUI;
@@ -18,16 +18,9 @@ public class GameUI : MonoBehaviour
         timerUI.Restart();
         SetGamePlay(0);
     }
-    Gameplay gamePlay;
     public void SetGamePlay(int levelID)
     {
-        foreach (Gameplay g in gameplays)
-            g.SetOn(false);
-
-        print("SetGamePlay " + levelID);
-
-        gamePlay = gameplays[levelID];
-        gamePlay.SetOn(true);
+        gameplayManager.Init(levelID);
         string title = GameManager.Instance.settings.GetTitle(levelID);
         SetTutorial(title);
         scoreUI.SetAciveState(levelID);
@@ -39,7 +32,7 @@ public class GameUI : MonoBehaviour
     }
     public void TutorialDone()
     {
-        gamePlay.InitGame();
+        gameplayManager.InitGame();
         GameManager.Instance.GameTutorialDone();
     }
     public void OnUpdate()

@@ -139,12 +139,13 @@ public class GameManager : MonoBehaviour
     }
     public void Space()
     {
-        if (state == states.intro)
-            InitGame();
-        else if (state == states.calibrate)
+        //if (state == states.intro)
+        //    InitGame();
+        //else 
+        if (state == states.calibrate)
             uiManager.CalibrateClicked(inputManager.pos1);
-        else if (state == states.summary)
-            Intro();
+        //else if (state == states.summary)
+        //    Intro();
     }
     public void Intro()
     {
