@@ -2060,6 +2060,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   field: {fileID: 685052350}
   state: 0
+  levelId: 0
   uiManager: {fileID: 1109424218}
   quadUtils: {fileID: 1109424219}
   settings:
@@ -2751,7 +2752,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1515e6786b593784cb1f7322afa595bb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gameplays: []
+  gameplays:
+  - {fileID: 485520876}
+  - {fileID: 626510035}
 --- !u!114 &1696610049
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2789,9 +2792,6 @@ MonoBehaviour:
   - {fileID: 970337081}
   - {fileID: 822526511}
   - {fileID: 1816067044}
-  scoreSignal: {fileID: 8897028083878912099, guid: efae7fd2b2b302943a92d49410f2f476, type: 3}
-  container: {fileID: 0}
-  score: 0
 --- !u!1 &1700496444
 GameObject:
   m_ObjectHideFlags: 0
