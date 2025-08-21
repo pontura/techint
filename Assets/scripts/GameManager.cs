@@ -1,8 +1,11 @@
 using System;
 using System.Collections;
+using System.Collections.Generic;
 using System.IO;
 using UnityEngine;
+using UnityEngine.EventSystems;
 using UnityEngine.Rendering.LookDev;
+using UnityEngine.UI;
 using YaguarLib.Audio;
 
 public class GameManager : MonoBehaviour
@@ -25,6 +28,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] UIManager uiManager;
     public QuadUtils quadUtils;
     public SettingsData settings;
+    public GameObject debugClick;
 
     public static GameManager Instance
     {
@@ -95,8 +99,10 @@ public class GameManager : MonoBehaviour
         posNormalized.x /= 2;
         posNormalized.y /= 2;
 
-        posNormalized.x *= Screen.width;
+        posNormalized.x *= (Screen.width/3);
         posNormalized.y *= Screen.height;
+
+        posNormalized.x += Screen.width / 3;
         return posNormalized;
 
     }
@@ -104,12 +110,32 @@ public class GameManager : MonoBehaviour
     {
         //-1 to 1:
         Vector2 pos = NormalizedToScreenPos(_pos);
-
+        debugClick.transform.position = pos;
+        CheckHitOnUI(pos);
         //if (state == states.game)
         //    enemiesManager.CheckHit(pos);
         //else 
-        if(state == states.calibrate)
+        if (state == states.calibrate)
             uiManager.DebugPoint(pos);
+    }
+    void CheckHitOnUI(Vector2 pos)
+    {
+        PointerEventData pointerData = new PointerEventData(EventSystem.current);
+        pointerData.position = pos;
+
+        // Raycast contra la UI
+        List<RaycastResult> results = new List<RaycastResult>();
+        EventSystem.current.RaycastAll(pointerData, results);
+
+        foreach (RaycastResult result in results)
+        {
+            ButtonLidar button = result.gameObject.GetComponent<ButtonLidar>();
+            if (button != null)
+            {
+                // Emulamos el click
+                button.OnButtonLidarClick();
+            }
+        }
     }
     public void Space()
     {
