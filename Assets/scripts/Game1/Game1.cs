@@ -30,12 +30,14 @@ public class Game1 : Gameplay
     }
     void SetActiveSlot()
     {
-        slots[id].SetActive();
+        print("SetActiveSlot " + id);
+        slots[items[id]].SetActive();
     }
     void OnClicked(int buttonID)
     {
         if(items[id] == buttonID)
         {
+            print("correct " + id);
             buttons[buttonID].GetComponent<Animator>().Play("correct");
             slots[buttonID].SetCorrect(true);
             id++;
@@ -46,8 +48,9 @@ public class Game1 : Gameplay
         }
         else
         {
+            print("incorrect " + id);
             buttons[buttonID].GetComponent<Animator>().Play("incorrect");
-            slots[buttonID].SetCorrect(false);
+            //slots[buttonID].SetCorrect(false);
         }
     }
     void Done()
