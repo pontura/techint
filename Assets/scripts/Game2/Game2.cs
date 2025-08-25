@@ -22,8 +22,9 @@ public class Game2 : Gameplay
         triviaSpeed = GameManager.Instance.settings.triviaSpeed;
         anim = GetComponent<Animator>(); 
         triviaID = 0;
-        line.SetSpeed(triviaSpeed);
-        line.Play();
+        line.SetSpeed(triviaSpeed); 
+        ui.Init(this);
+        OnTrivia();
     }       
     public void OnTrivia()
     {

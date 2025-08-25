@@ -1,7 +1,7 @@
 {
-	"time_game_1":30,	
-	"time_game_2":30,	
-	"time_game_3":30,		
+	"time_game_1":300,	
+	"time_game_2":300,	
+	"time_game_3":300,		
 	"delay_to_read_gameTitle":3,	
 	"timeOverDuration":2,	
 	"timeOver": "¡Tiempo!",
@@ -16,25 +16,25 @@
 			"trivia": "Acá va la consigna 1",
 			"trivia_valor": 250,
 			"trivia_valor_inicial": 200,
-			"trivia_valor_add": 50
+			"trivia_valor_add": 25
 		},	
 		{	
 			"trivia": "Acá va la consigna 2",
 			"trivia_valor": 250,
 			"trivia_valor_inicial": 300,
-			"trivia_valor_add": 50
+			"trivia_valor_add": 25
 		},	
 		{	
 			"trivia": "Acá va la consigna 3",
 			"trivia_valor": 250,
 			"trivia_valor_inicial": 150,
-			"trivia_valor_add": 50
+			"trivia_valor_add": 25
 		},	
 		{	
 			"trivia": "Acá va la consigna 4",
 			"trivia_valor": 250,
 			"trivia_valor_inicial": 100,
-			"trivia_valor_add": 50
+			"trivia_valor_add": 25
 		}
 	]
 }	
