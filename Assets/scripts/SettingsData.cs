@@ -15,6 +15,10 @@ public class SettingsData
     public int delay_to_read_gameTitle;
     public int timeOverDuration;
 
+    public int winDuration;
+    public string win;
+    public string lose;
+
     public string trivia_1;
     public int trivia_1_valor;
     public int trivia_1_valor_inicial_1;
@@ -50,5 +54,10 @@ public class SettingsData
             case 1: return level_2_title;
             default: return level_3_title;
         }
+    }
+    public string GetResult(bool _win)
+    {
+        if (_win) return win;
+        else return lose;
     }
 }

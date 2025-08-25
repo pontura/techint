@@ -1,12 +1,8 @@
-using System;
-using System.Collections;
 using System.Collections.Generic;
 using System.IO;
 using UnityEngine;
 using UnityEngine.EventSystems;
-using UnityEngine.Rendering.LookDev;
-using UnityEngine.UI;
-using YaguarLib.Audio;
+using static UnityEditor.PlayerSettings;
 
 public class GameManager : MonoBehaviour
 {
@@ -28,7 +24,9 @@ public class GameManager : MonoBehaviour
     [SerializeField] UIManager uiManager;
     public QuadUtils quadUtils;
     public SettingsData settings;
-    public GameObject debugClick;
+
+    public ClickPointer debugClick1;
+    public ClickPointer debugClick2;
 
     public static GameManager Instance
     {
@@ -106,11 +104,23 @@ public class GameManager : MonoBehaviour
         return posNormalized;
 
     }
+    void InitDebugClick(int id, Vector2 _pos)
+    {
+        if (id == 1)
+            debugClick1.Init(_pos);
+        else
+            debugClick2.Init(_pos);
+    }
     public void OnHit(Vector2 _pos)
     {
         //-1 to 1:
         Vector2 pos = NormalizedToScreenPos(_pos);
-        debugClick.transform.position = pos;
+
+        if(pos.x<Screen.width/2)
+            InitDebugClick(1, pos);
+        else
+            InitDebugClick(2, pos);
+
         CheckHitOnUI(pos);
         //if (state == states.game)
         //    enemiesManager.CheckHit(pos);
@@ -164,15 +174,30 @@ public class GameManager : MonoBehaviour
 #endif
         state = states.game_paused;
         uiManager.SetScreen(state);
+        Events.OnInitLevel(levelId);
     }
     public void GameTutorialDone()
     {
         state = states.game;
     }
+    public void Win(int player)
+    {
+        Events.OnWinLevel(player);
+
+        string win = GameManager.Instance.settings.win;
+        string lose = GameManager.Instance.settings.lose;
+        int duration = GameManager.Instance.settings.winDuration;
+
+        Events.OnSignalByPlayer(win, player, duration, NextGame);
+
+        if (player == 1)   player = 2;  else player = 1;
+        Events.OnSignalByPlayer(lose, player, duration, NextGame);
+    }
     public void NextGame()
     {
         levelId ++;
         ui.SetGamePlay(levelId);
+        Events.OnInitLevel(levelId);
 
     }
     void OnNext()

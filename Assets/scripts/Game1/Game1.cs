@@ -5,6 +5,7 @@ public class Game1 : Gameplay
 {
     public List<int> items;
     int id;
+    public Transform slotContainer;
     public List<Slot> slots;
     public List<SimpleButton> buttons;
 
@@ -31,7 +32,10 @@ public class Game1 : Gameplay
     void SetActiveSlot()
     {
         print("SetActiveSlot " + id);
-        slots[items[id]].SetActive();
+        Slot s = slots[items[id]];
+        s.transform.SetParent(transform);
+        s.SetActive();
+        s.transform.SetParent(slotContainer);
     }
     void OnClicked(int buttonID)
     {
@@ -39,6 +43,7 @@ public class Game1 : Gameplay
         {
             print("correct " + id);
             buttons[buttonID].GetComponent<Animator>().Play("correct");
+            buttons[buttonID].Done();
             slots[buttonID].SetCorrect(true);
             id++;
             if (id >= slots.Count)
@@ -55,7 +60,7 @@ public class Game1 : Gameplay
     }
     void Done()
     {
-        GameManager.Instance.NextGame();
+        GameManager.Instance.Win(playerID);
     }
     void Success()
     {

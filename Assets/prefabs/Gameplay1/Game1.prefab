@@ -215,6 +215,7 @@ GameObject:
   - component: {fileID: 7288388127943831594}
   - component: {fileID: 6785374590914013120}
   - component: {fileID: 2809097012473518924}
+  - component: {fileID: 5884180346777020744}
   m_Layer: 5
   m_Name: hint (2)
   m_TagString: Untagged
@@ -279,6 +280,23 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!111 &5884180346777020744
+Animation:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 250875046494962965}
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Animation: {fileID: 7400000, guid: fd28bd887336389428e05e829c70b619, type: 2}
+  m_Animations:
+  - {fileID: 7400000, guid: fd28bd887336389428e05e829c70b619, type: 2}
+  m_WrapMode: 0
+  m_PlayAutomatically: 1
+  m_AnimatePhysics: 0
+  m_UpdateMode: 0
+  m_CullingType: 0
 --- !u!1 &293552265452929869
 GameObject:
   m_ObjectHideFlags: 0
@@ -489,6 +507,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 88ba11ef9d6f0024098d63b31b2d6c14, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  done: 0
 --- !u!95 &4759703623809977784
 Animator:
   serializedVersion: 7
@@ -1556,6 +1575,7 @@ GameObject:
   - component: {fileID: 4697791578733549760}
   - component: {fileID: 5251348926710016649}
   - component: {fileID: 7392107389715735691}
+  - component: {fileID: 7555653204137673713}
   m_Layer: 5
   m_Name: hint
   m_TagString: Untagged
@@ -1620,6 +1640,23 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!111 &7555653204137673713
+Animation:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2277133801757605079}
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Animation: {fileID: 7400000, guid: fd28bd887336389428e05e829c70b619, type: 2}
+  m_Animations:
+  - {fileID: 7400000, guid: fd28bd887336389428e05e829c70b619, type: 2}
+  m_WrapMode: 0
+  m_PlayAutomatically: 1
+  m_AnimatePhysics: 0
+  m_UpdateMode: 0
+  m_CullingType: 0
 --- !u!1 &2289142167230918034
 GameObject:
   m_ObjectHideFlags: 0
@@ -2516,6 +2553,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 88ba11ef9d6f0024098d63b31b2d6c14, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  done: 0
 --- !u!95 &4040374380497048653
 Animator:
   serializedVersion: 7
@@ -2750,6 +2788,7 @@ GameObject:
   - component: {fileID: 3101333913285015965}
   - component: {fileID: 1399681349952857193}
   - component: {fileID: 7272175683359755536}
+  - component: {fileID: 4799115422943508689}
   m_Layer: 5
   m_Name: hint
   m_TagString: Untagged
@@ -2814,6 +2853,23 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!111 &4799115422943508689
+Animation:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4400927624508872785}
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Animation: {fileID: 7400000, guid: fd28bd887336389428e05e829c70b619, type: 2}
+  m_Animations:
+  - {fileID: 7400000, guid: fd28bd887336389428e05e829c70b619, type: 2}
+  m_WrapMode: 0
+  m_PlayAutomatically: 1
+  m_AnimatePhysics: 0
+  m_UpdateMode: 0
+  m_CullingType: 0
 --- !u!1 &4595509589143880365
 GameObject:
   m_ObjectHideFlags: 0
@@ -3024,6 +3080,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 88ba11ef9d6f0024098d63b31b2d6c14, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  done: 0
 --- !u!95 &8047405108049438596
 Animator:
   serializedVersion: 7
@@ -3256,6 +3313,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 88ba11ef9d6f0024098d63b31b2d6c14, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  done: 0
 --- !u!95 &1179871238386823866
 Animator:
   serializedVersion: 7
@@ -3822,6 +3880,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 88ba11ef9d6f0024098d63b31b2d6c14, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  done: 0
 --- !u!95 &7836482873881011274
 Animator:
   serializedVersion: 7
@@ -4152,6 +4211,7 @@ GameObject:
   - component: {fileID: 4050369600047582933}
   - component: {fileID: 5411106561522331138}
   - component: {fileID: 1088992447705203148}
+  - component: {fileID: 6626603689099079830}
   m_Layer: 5
   m_Name: hint (1)
   m_TagString: Untagged
@@ -4216,6 +4276,23 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!111 &6626603689099079830
+Animation:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6927946575486491437}
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Animation: {fileID: 7400000, guid: fd28bd887336389428e05e829c70b619, type: 2}
+  m_Animations:
+  - {fileID: 7400000, guid: fd28bd887336389428e05e829c70b619, type: 2}
+  m_WrapMode: 0
+  m_PlayAutomatically: 1
+  m_AnimatePhysics: 0
+  m_UpdateMode: 0
+  m_CullingType: 0
 --- !u!1 &6975629657789847899
 GameObject:
   m_ObjectHideFlags: 0
@@ -4227,6 +4304,7 @@ GameObject:
   - component: {fileID: 1431827189636466281}
   - component: {fileID: 4146494523604745255}
   - component: {fileID: 3734098600548123321}
+  - component: {fileID: 4543113429315024215}
   m_Layer: 5
   m_Name: hint
   m_TagString: Untagged
@@ -4291,6 +4369,23 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!111 &4543113429315024215
+Animation:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6975629657789847899}
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Animation: {fileID: 7400000, guid: fd28bd887336389428e05e829c70b619, type: 2}
+  m_Animations:
+  - {fileID: 7400000, guid: fd28bd887336389428e05e829c70b619, type: 2}
+  m_WrapMode: 0
+  m_PlayAutomatically: 1
+  m_AnimatePhysics: 0
+  m_UpdateMode: 0
+  m_CullingType: 0
 --- !u!1 &7248100202799794698
 GameObject:
   m_ObjectHideFlags: 0
@@ -4732,11 +4827,12 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7437860768851242642}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 88ba11ef9d6f0024098d63b31b2d6c14, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  done: 0
 --- !u!95 &3554869362631564742
 Animator:
   serializedVersion: 7
@@ -4845,6 +4941,7 @@ GameObject:
   - component: {fileID: 7495183043241577514}
   - component: {fileID: 2362297553622351836}
   - component: {fileID: 2326339731082255063}
+  - component: {fileID: 6114280435154971720}
   m_Layer: 5
   m_Name: hint
   m_TagString: Untagged
@@ -4909,6 +5006,23 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!111 &6114280435154971720
+Animation:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7507884454846268554}
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Animation: {fileID: 7400000, guid: fd28bd887336389428e05e829c70b619, type: 2}
+  m_Animations:
+  - {fileID: 7400000, guid: fd28bd887336389428e05e829c70b619, type: 2}
+  m_WrapMode: 0
+  m_PlayAutomatically: 1
+  m_AnimatePhysics: 0
+  m_UpdateMode: 0
+  m_CullingType: 0
 --- !u!1 &7511907575887023386
 GameObject:
   m_ObjectHideFlags: 0
@@ -5044,6 +5158,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 88ba11ef9d6f0024098d63b31b2d6c14, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  done: 0
 --- !u!95 &3149952177732657840
 Animator:
   serializedVersion: 7
@@ -5377,6 +5492,7 @@ GameObject:
   - component: {fileID: 7777837426944371562}
   - component: {fileID: 1025027262727692952}
   - component: {fileID: 4579644690139323572}
+  - component: {fileID: 8516726820881212745}
   m_Layer: 5
   m_Name: hint
   m_TagString: Untagged
@@ -5441,6 +5557,23 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!111 &8516726820881212745
+Animation:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8130386423230061080}
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Animation: {fileID: 7400000, guid: fd28bd887336389428e05e829c70b619, type: 2}
+  m_Animations:
+  - {fileID: 7400000, guid: fd28bd887336389428e05e829c70b619, type: 2}
+  m_WrapMode: 0
+  m_PlayAutomatically: 1
+  m_AnimatePhysics: 0
+  m_UpdateMode: 0
+  m_CullingType: 0
 --- !u!1 &8573264806796158287
 GameObject:
   m_ObjectHideFlags: 0
@@ -5527,6 +5660,7 @@ GameObject:
   - component: {fileID: 5458335745573187423}
   - component: {fileID: 1497085039996347217}
   - component: {fileID: 4879736746544893832}
+  - component: {fileID: 3281497473769154582}
   m_Layer: 5
   m_Name: hint
   m_TagString: Untagged
@@ -5591,6 +5725,23 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!111 &3281497473769154582
+Animation:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8575136854158473866}
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Animation: {fileID: 7400000, guid: fd28bd887336389428e05e829c70b619, type: 2}
+  m_Animations:
+  - {fileID: 7400000, guid: fd28bd887336389428e05e829c70b619, type: 2}
+  m_WrapMode: 0
+  m_PlayAutomatically: 1
+  m_AnimatePhysics: 0
+  m_UpdateMode: 0
+  m_CullingType: 0
 --- !u!1 &8579786157957237563
 GameObject:
   m_ObjectHideFlags: 0
@@ -5648,7 +5799,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 744cb367740cc504886c7f4d8d162220, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerID: 1
   items: 
+  slotContainer: {fileID: 7026810390844875589}
   slots:
   - {fileID: 7174034850338096482}
   - {fileID: 2453734711644191994}
@@ -5772,7 +5925,7 @@ Animation:
   m_GameObject: {fileID: 8907058095429836207}
   m_Enabled: 1
   serializedVersion: 4
-  m_Animation: {fileID: 0}
+  m_Animation: {fileID: 7400000, guid: fd28bd887336389428e05e829c70b619, type: 2}
   m_Animations:
   - {fileID: 7400000, guid: fd28bd887336389428e05e829c70b619, type: 2}
   m_WrapMode: 0

@@ -27,6 +27,5 @@ public class TriviaLine : MonoBehaviour
     public void Play()
     {
         anim.speed = speed;
-        game.OnTrivia();
     }
 }

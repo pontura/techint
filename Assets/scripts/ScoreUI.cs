@@ -4,7 +4,6 @@ public class ScoreUI : MonoBehaviour
 {
     [SerializeField] LevelSignal[] player1;
     [SerializeField] LevelSignal[] player2;
-    GameManager manager;
 
     private void Awake()
     {
@@ -17,16 +16,16 @@ public class ScoreUI : MonoBehaviour
     }
     private void OnWinLevel(int playerID)
     {
-        int levelID = manager.levelId;
+        int levelID = GameManager.Instance.levelId;
         if(playerID == 1)
         {
-            player1[levelID].SetState(LevelSignal.states.win);
-            player2[levelID].SetState(LevelSignal.states.lose);
+            player1[levelID ].SetState(LevelSignal.states.win);
+            player2[levelID ].SetState(LevelSignal.states.lose);
         }
         else
         {
-            player1[levelID].SetState(LevelSignal.states.lose);
-            player2[levelID].SetState(LevelSignal.states.win);
+            player1[levelID ].SetState(LevelSignal.states.lose);
+            player2[levelID ].SetState(LevelSignal.states.win);
         }
     }
 
