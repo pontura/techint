@@ -67,24 +67,24 @@ public class PipesManager : MonoBehaviour
     }
 
     void ExportData(bool tiles) {
-        string json = "\"pipeStates\":{[";
+        string json = "\"pipeStates\":[";
         Pipe[] pipes = pipesContainer.GetComponentsInChildren<Pipe>();
         for(int i = 0; i < pipes.Length; i++) { 
             if (i % grid.constraintCount == 0)
-                json += "[";
+                json += "\"";
             Debug.Log(pipes[i].gameObject.name);
             if(tiles)
                 json += "" + pipes[i].TileId;
             else
                 json += "" + pipes[i].RotationState;
             if (i % grid.constraintCount == grid.constraintCount - 1) {
-                json += "]";
+                json += "\"";
                 if(i<pipes.Length-1)
                     json += ",";
             } else
                 json += ",";
         }
-        json += "]}";
+        json += "]";
         Debug.Log(json);
     }
 
