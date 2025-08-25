@@ -182,6 +182,8 @@ public class GameManager : MonoBehaviour
     }
     public void Win(int player)
     {
+        Events.OnWinLevel(player);
+
         string win = GameManager.Instance.settings.win;
         string lose = GameManager.Instance.settings.lose;
         int duration = GameManager.Instance.settings.winDuration;
