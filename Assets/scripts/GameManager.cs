@@ -1,12 +1,7 @@
-using System;
-using System.Collections;
 using System.Collections.Generic;
 using System.IO;
 using UnityEngine;
 using UnityEngine.EventSystems;
-using UnityEngine.Rendering.LookDev;
-using UnityEngine.UI;
-using YaguarLib.Audio;
 
 public class GameManager : MonoBehaviour
 {
@@ -168,6 +163,17 @@ public class GameManager : MonoBehaviour
     public void GameTutorialDone()
     {
         state = states.game;
+    }
+    public void Win(int player)
+    {
+        string win = GameManager.Instance.settings.win;
+        string lose = GameManager.Instance.settings.lose;
+        int duration = GameManager.Instance.settings.winDuration;
+
+        Events.OnSignalByPlayer(win, player, duration, NextGame);
+
+        if (player == 1)   player = 2;  else player = 1;
+        Events.OnSignalByPlayer(lose, player, duration, NextGame);
     }
     public void NextGame()
     {

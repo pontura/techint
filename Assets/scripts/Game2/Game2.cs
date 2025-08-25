@@ -46,7 +46,7 @@ public class Game2 : Gameplay
     }
     void Done()
     {
-        GameManager.Instance.NextGame();
+        GameManager.Instance.Win(playerID);
     }
 
 }

@@ -59,7 +59,7 @@ public class Game1 : Gameplay
     }
     void Done()
     {
-        GameManager.Instance.NextGame();
+        GameManager.Instance.Win(playerID);
     }
     void Success()
     {

@@ -10,10 +10,12 @@ public class SignalsUI : MonoBehaviour
     {
         print("Awake" + gameObject.name);
         Events.OnSignal += OnSignal;
+        Events.OnSignalByPlayer += OnSignalByPlayer;
     }
     private void OnDestroy()
     {
         Events.OnSignal -= OnSignal;
+        Events.OnSignalByPlayer -= OnSignalByPlayer;
     }
     void OnSignal(string text, int duration, System.Action OnDone)
     {
@@ -22,6 +24,15 @@ public class SignalsUI : MonoBehaviour
 
         foreach (SignalUI signal in signals)
             signal.SetState(text);
+
+        Invoke("OnSignalDone", duration);
+    }
+    void OnSignalByPlayer(string text, int player, int duration, System.Action OnDone)
+    {
+        this.OnDone = OnDone;
+        asset.SetActive(true);
+
+        signals[player-1].SetState(text);
 
         Invoke("OnSignalDone", duration);
     }
