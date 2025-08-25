@@ -5,6 +5,7 @@ public class Game1 : Gameplay
 {
     public List<int> items;
     int id;
+    public Transform slotContainer;
     public List<Slot> slots;
     public List<SimpleButton> buttons;
 
@@ -31,7 +32,10 @@ public class Game1 : Gameplay
     void SetActiveSlot()
     {
         print("SetActiveSlot " + id);
-        slots[items[id]].SetActive();
+        Slot s = slots[items[id]];
+        s.transform.SetParent(transform);
+        s.SetActive();
+        s.transform.SetParent(slotContainer);
     }
     void OnClicked(int buttonID)
     {
