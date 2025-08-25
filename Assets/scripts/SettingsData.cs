@@ -1,4 +1,5 @@
 using System;
+using Unity.VisualScripting;
 
 [Serializable]
 public class SettingsData
@@ -13,6 +14,25 @@ public class SettingsData
     public string timeOver;
     public int delay_to_read_gameTitle;
     public int timeOverDuration;
+
+    public string trivia_1;
+    public int trivia_1_valor;
+    public int trivia_1_valor_inicial_1;
+    public int trivia_1_valor_inicial_2;
+
+    public float triviaSpeed;
+    public TriviaData[] trivias;
+
+    [Serializable]
+    public class TriviaData
+    {
+        public string trivia;
+        public int trivia_valor;
+        public int trivia_valor_inicial_1;
+        public int trivia_valor_inicial_2;
+        public int trivia_valor_add;
+    }
+
 
     public int GetTime(int levelID)
     {

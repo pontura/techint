@@ -1125,6 +1125,17 @@ Animation:
   m_AnimatePhysics: 0
   m_UpdateMode: 0
   m_CullingType: 0
+--- !u!114 &965249731 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7351605771588648048, guid: 68170c6cde892144e843f9f2fe862a42, type: 3}
+  m_PrefabInstance: {fileID: 8861387963647538209}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7089ca1dfaa4c164fbead8b010a2dac3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &966855228
 GameObject:
   m_ObjectHideFlags: 0
@@ -1447,6 +1458,12 @@ MonoBehaviour:
     timeOver: 
     delay_to_read_gameTitle: 0
     timeOverDuration: 0
+    trivia_1: 
+    trivia_1_valor: 0
+    trivia_1_valor_inicial_1: 0
+    trivia_1_valor_inicial_2: 0
+    triviaSpeed: 0
+    trivias: []
   debugClick: {fileID: 932348441}
 --- !u!1 &1226269992
 GameObject:
@@ -2018,6 +2035,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f24afe175d50f2842ba89def2a8a2933, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1659903913 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6014849492948085069, guid: 68170c6cde892144e843f9f2fe862a42, type: 3}
+  m_PrefabInstance: {fileID: 8861387963647538209}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7089ca1dfaa4c164fbead8b010a2dac3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1687364123
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2040,7 +2068,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3320196920195080473, guid: 9451f826a2494b44a96b2840fd45092a, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4594547356459235446, guid: 9451f826a2494b44a96b2840fd45092a, type: 3}
       propertyPath: m_Pivot.x
@@ -3003,6 +3031,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: lines_over
       objectReference: {fileID: 0}
+    - target: {fileID: 6484056035210222796, guid: fd33a7c2e9f1b4e499cfb76e40fa2b51, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7074621047026065648, guid: fd33a7c2e9f1b4e499cfb76e40fa2b51, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -3518,14 +3550,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 2750118370000081379, guid: 68170c6cde892144e843f9f2fe862a42, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 3957280161680619308, guid: 68170c6cde892144e843f9f2fe862a42, type: 3}
       propertyPath: m_Name
       value: Gameplays
       objectReference: {fileID: 0}
+    - target: {fileID: 7081433477978488410, guid: 68170c6cde892144e843f9f2fe862a42, type: 3}
+      propertyPath: 'game2.Array.data[0]'
+      value: 
+      objectReference: {fileID: 1659903913}
+    - target: {fileID: 7081433477978488410, guid: 68170c6cde892144e843f9f2fe862a42, type: 3}
+      propertyPath: 'game2.Array.data[1]'
+      value: 
+      objectReference: {fileID: 965249731}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
