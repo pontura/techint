@@ -1,5 +1,5 @@
 {
-	"time_game_1":930,	
+	"time_game_1":30,	
 	"time_game_2":30,	
 	"time_game_3":30,		
 	"delay_to_read_gameTitle":3,	
@@ -8,5 +8,51 @@
 	"intro_title": "Bienvenidos!",
 	"level_1_title": "Construí la planta energética",
 	"level_2_title": "Armemos el ducto!",	
-	"level_3_title": "Pongamos en marcha la planta!"
-}
+	"level_3_title": "Pongamos en marcha la planta!",	
+	"triviaSpeed": 1,	
+	"trivias":
+	[
+		{
+			"trivia": "Acá va la consigna 1",
+			"trivia_valor": 250,
+			"trivia_valor_inicial_1": 300,
+			"trivia_valor_inicial_2": 200,
+			"trivia_valor_add": 50
+		},	
+		{	
+			"trivia": "Acá va la consigna 2",
+			"trivia_valor": 250,
+			"trivia_valor_inicial_1": 300,
+			"trivia_valor_inicial_2": 200,
+			"trivia_valor_add": 50
+		},	
+		{	
+			"trivia": "Acá va la consigna 3",
+			"trivia_valor": 250,
+			"trivia_valor_inicial_1": 300,
+			"trivia_valor_inicial_2": 200
+		},	
+		{	
+			"trivia": "Acá va la consigna 4",
+			"trivia_valor": 250,
+			"trivia_valor_inicial_1": 300,
+			"trivia_valor_inicial_2": 200,
+			"trivia_valor_add": 50
+		},	
+		{
+			"trivia": "Acá va la consigna 5",
+			"trivia_valor": 250,
+			"trivia_valor_inicial_1": 300,
+			"trivia_valor_inicial_2": 200,
+			"trivia_valor_add": 50
+		},	
+		{
+			"trivia": "Acá va la consigna 6",
+			"trivia_valor": 250,
+			"trivia_valor_inicial_1": 300,
+			"trivia_valor_inicial_2": 200,
+			"trivia_valor_add": 50
+		}
+	]
+}	
+	
