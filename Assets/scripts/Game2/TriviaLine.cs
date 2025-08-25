@@ -10,14 +10,17 @@ public class TriviaLine : MonoBehaviour
         anim = GetComponent<Animator>();
         anim.speed = 0;
     }
-    public void Init(Game2 game, float speed)
+    public void Init(Game2 game)
+    {
+        this.game = game;
+    }
+    public void SetSpeed(float speed)
     {
         this.speed = speed;
-        anim.speed = speed;
-        this.game = game;
     }
     public void OnTrivia()
     {
+        print("OnTrivia");
         anim.speed = 0;
         game.OnTrivia();
     }

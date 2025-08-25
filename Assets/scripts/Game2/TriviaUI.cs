@@ -1,10 +1,14 @@
 using UnityEngine;
+using UnityEngine.UI;
 using static SettingsData;
 
 public class TriviaUI : MonoBehaviour
 {
     [SerializeField] TMPro.TMP_Text fieldTitle;
     [SerializeField] TMPro.TMP_Text field;
+    [SerializeField] Animator resultsAnim;
+    [SerializeField] Slider slider;
+
     Game2 game;
     TriviaData d;
     int v;
@@ -20,30 +24,49 @@ public class TriviaUI : MonoBehaviour
         gameObject.SetActive(true);
         this.d = d;
         fieldTitle.text = d.trivia;
-        if (Random.Range(0, 10) > 5)
-            v = d.trivia_valor_inicial_1;
-        else
-            v = d.trivia_valor_inicial_2;
+
+       // if (Random.Range(0, 10) > 5)
+            v = d.trivia_valor_inicial;
+       // else
+          //  v = d.trivia_valor_inicial_2;
+
         field.text = v.ToString();
     }
     public void OnClicked(bool add)
     {
         print("OnClicked " + add);
-        if (add) 
-            v += d.trivia_valor_add;
-        else 
-            v -= d.trivia_valor_add;
 
-        field.text = v.ToString();
-
-        if (v == d.trivia_valor)
-        {
-            game.OnTriviaAnswer(true);
-            gameObject.SetActive(false);
-        }
+        if (d.trivia_valor_inicial > d.trivia_valor && add)
+            MaxLimitReached();
+        else if (d.trivia_valor_inicial < d.trivia_valor && !add)
+            MaxLimitReached();
         else
         {
-            game.OnTriviaAnswer(false);
+            if (add)
+                v += d.trivia_valor_add;
+            else
+                v -= d.trivia_valor_add;
+
+            field.text = v.ToString();
+
+            if (v == d.trivia_valor)
+            {
+                resultsAnim.Play("triviaOut");
+                Invoke("Reset", 0.25f);
+                game.OnTriviaAnswer(true);
+            }
+            else
+            {
+                game.OnTriviaAnswer(false);
+            }
         }
+    }
+    void MaxLimitReached()
+    {
+        resultsAnim.Play("MaxLimitReached");
+    }
+    void Reset()
+    {
+        gameObject.SetActive(false);
     }
 }

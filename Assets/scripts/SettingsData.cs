@@ -28,8 +28,7 @@ public class SettingsData
     {
         public string trivia;
         public int trivia_valor;
-        public int trivia_valor_inicial_1;
-        public int trivia_valor_inicial_2;
+        public int trivia_valor_inicial;
         public int trivia_valor_add;
     }
 

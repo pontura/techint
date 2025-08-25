@@ -12,13 +12,18 @@ public class Game2 : Gameplay
     [SerializeField] TriviaLine line;
     [SerializeField] TriviaUI ui;
 
+    private void Awake()
+    {
+        ui.Init(this);
+        line.Init(this);
+    }
     public override void InitGame()
     {
         triviaSpeed = GameManager.Instance.settings.triviaSpeed;
         anim = GetComponent<Animator>(); 
         triviaID = 0;
-        line.Init(this, triviaSpeed);
-        ui.Init(this);
+        line.SetSpeed(triviaSpeed);
+        line.Play();
     }       
     public void OnTrivia()
     {

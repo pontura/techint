@@ -15,42 +15,25 @@
 		{
 			"trivia": "Acá va la consigna 1",
 			"trivia_valor": 250,
-			"trivia_valor_inicial_1": 300,
-			"trivia_valor_inicial_2": 200,
+			"trivia_valor_inicial": 200,
 			"trivia_valor_add": 50
 		},	
 		{	
 			"trivia": "Acá va la consigna 2",
 			"trivia_valor": 250,
-			"trivia_valor_inicial_1": 300,
-			"trivia_valor_inicial_2": 200,
+			"trivia_valor_inicial": 300,
 			"trivia_valor_add": 50
 		},	
 		{	
 			"trivia": "Acá va la consigna 3",
 			"trivia_valor": 250,
-			"trivia_valor_inicial_1": 300,
-			"trivia_valor_inicial_2": 200
+			"trivia_valor_inicial": 150,
+			"trivia_valor_add": 50
 		},	
 		{	
 			"trivia": "Acá va la consigna 4",
 			"trivia_valor": 250,
-			"trivia_valor_inicial_1": 300,
-			"trivia_valor_inicial_2": 200,
-			"trivia_valor_add": 50
-		},	
-		{
-			"trivia": "Acá va la consigna 5",
-			"trivia_valor": 250,
-			"trivia_valor_inicial_1": 300,
-			"trivia_valor_inicial_2": 200,
-			"trivia_valor_add": 50
-		},	
-		{
-			"trivia": "Acá va la consigna 6",
-			"trivia_valor": 250,
-			"trivia_valor_inicial_1": 300,
-			"trivia_valor_inicial_2": 200,
+			"trivia_valor_inicial": 100,
 			"trivia_valor_add": 50
 		}
 	]
