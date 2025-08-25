@@ -5,13 +5,13 @@
 	"delay_to_read_gameTitle":3,	
 	"timeOverDuration":2,	
 	"winDuration":3,	
-	"win": "¡Muy bien!",
+	"win": "¡Buen trabajo!",
 	"lose": "¡Te ganaron!",
 	"timeOver": "¡Tiempo!",
-	"intro_title": "Bienvenidos!",
-	"level_1_title": "Construí la planta energética",
-	"level_2_title": "Armemos el ducto!",	
-	"level_3_title": "Pongamos en marcha la planta!",	
+	"intro_title": "¡Bienvenidos!",
+	"level_1_title": "Construí tu planta energética.",
+	"level_2_title": "Ahora realizá la perforación.",	
+	"level_3_title": "Es hora de construir el ducto.",	
 	"triviaSpeed": 2,	
 	"trivias":
 	[

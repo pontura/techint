@@ -6007,7 +6007,7 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4291413700
+    rgba: 3335112388
   m_fontColor: {r: 0.76862746, g: 0.7764706, b: 0.7882353, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
@@ -6278,6 +6278,10 @@ PrefabInstance:
     - target: {fileID: 1050637671284846446, guid: c282cd2776088c2409784939fb6546f4, type: 3}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1553099634228988995, guid: c282cd2776088c2409784939fb6546f4, type: 3}
+      propertyPath: m_fontColor32.rgba
+      value: 13223620
       objectReference: {fileID: 0}
     - target: {fileID: 2927723981224072384, guid: c282cd2776088c2409784939fb6546f4, type: 3}
       propertyPath: m_AnchoredPosition.y
@@ -6833,6 +6837,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1553099634228988995, guid: c282cd2776088c2409784939fb6546f4, type: 3}
+      propertyPath: m_fontColor32.rgba
+      value: 13223620
+      objectReference: {fileID: 0}
     - target: {fileID: 2927723981224072384, guid: c282cd2776088c2409784939fb6546f4, type: 3}
       propertyPath: m_AnchoredPosition.x
       value: 28.100037
@@ -6946,6 +6954,10 @@ PrefabInstance:
     - target: {fileID: 1050637671284846446, guid: c282cd2776088c2409784939fb6546f4, type: 3}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1553099634228988995, guid: c282cd2776088c2409784939fb6546f4, type: 3}
+      propertyPath: m_fontColor32.rgba
+      value: 13223620
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
