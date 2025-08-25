@@ -2,6 +2,7 @@ using System.Collections.Generic;
 using System.IO;
 using UnityEngine;
 using UnityEngine.EventSystems;
+using static UnityEditor.PlayerSettings;
 
 public class GameManager : MonoBehaviour
 {
@@ -23,7 +24,9 @@ public class GameManager : MonoBehaviour
     [SerializeField] UIManager uiManager;
     public QuadUtils quadUtils;
     public SettingsData settings;
-    public GameObject debugClick;
+
+    public ClickPointer debugClick1;
+    public ClickPointer debugClick2;
 
     public static GameManager Instance
     {
@@ -101,11 +104,23 @@ public class GameManager : MonoBehaviour
         return posNormalized;
 
     }
+    void InitDebugClick(int id, Vector2 _pos)
+    {
+        if (id == 1)
+            debugClick1.Init(_pos);
+        else
+            debugClick2.Init(_pos);
+    }
     public void OnHit(Vector2 _pos)
     {
         //-1 to 1:
         Vector2 pos = NormalizedToScreenPos(_pos);
-        debugClick.transform.position = pos;
+
+        if(pos.x<Screen.width/2)
+            InitDebugClick(1, pos);
+        else
+            InitDebugClick(2, pos);
+
         CheckHitOnUI(pos);
         //if (state == states.game)
         //    enemiesManager.CheckHit(pos);
