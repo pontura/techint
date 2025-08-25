@@ -43,6 +43,7 @@ public class Game1 : Gameplay
         {
             print("correct " + id);
             buttons[buttonID].GetComponent<Animator>().Play("correct");
+            buttons[buttonID].Done();
             slots[buttonID].SetCorrect(true);
             id++;
             if (id >= slots.Count)
