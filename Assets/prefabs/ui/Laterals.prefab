@@ -31384,10 +31384,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: logotypes (1)
       objectReference: {fileID: 0}
-    - target: {fileID: 2968385098493847807, guid: 5c7c52a80212b38409657b6a64b59bc4, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 3584211350185926256, guid: 5c7c52a80212b38409657b6a64b59bc4, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
