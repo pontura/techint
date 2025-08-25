@@ -174,6 +174,7 @@ public class GameManager : MonoBehaviour
 #endif
         state = states.game_paused;
         uiManager.SetScreen(state);
+        Events.OnInitLevel(levelId);
     }
     public void GameTutorialDone()
     {
@@ -194,6 +195,7 @@ public class GameManager : MonoBehaviour
     {
         levelId ++;
         ui.SetGamePlay(levelId);
+        Events.OnInitLevel(levelId);
 
     }
     void OnNext()
