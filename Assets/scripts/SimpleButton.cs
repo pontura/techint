@@ -12,6 +12,7 @@ public class SimpleButton : ButtonLidar
     }
     public override void OnClicked() 
     {
-        OnClickDone(id);
+        if(OnClickDone != null)
+            OnClickDone(id);
     }
 }
