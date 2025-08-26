@@ -6,6 +6,7 @@ public class Game1 : Gameplay
     public List<int> items;
     int id;
     public Transform slotContainer;
+    public TMPro.TMP_Text title;
     public List<Slot> slots;
     public List<SimpleButton> buttons;
 
@@ -14,7 +15,7 @@ public class Game1 : Gameplay
         items = new List<int>();
         id = 0;
         int a = 0;
-        for (a = 0; a<slots.Count; a++)
+        for (a = 0; a < slots.Count; a++)
         {
             slots[a].Inactive();
             items.Add(a);
@@ -28,6 +29,7 @@ public class Game1 : Gameplay
             a++;
         }
         SetActiveSlot();
+        title.text = GameManager.Instance.settings.level_1_title;
     }
     void SetActiveSlot()
     {
