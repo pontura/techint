@@ -13,6 +13,10 @@ public class PipesManager : MonoBehaviour
 
     System.Action OnDone;
 
+    [SerializeField] bool mirrored;
+
+    int[][] rotationsDone; 
+
 
     private void Start() {
         Events.OnPipeRotate += CheckDone;
@@ -25,13 +29,21 @@ public class PipesManager : MonoBehaviour
     public void Init(System.Action onDone) {
         level = levelsManager.GetCurrentLevel();
         pipes = pipesContainer.GetComponentsInChildren<Pipe>();
+        rotationsDone = new int[level.pipeRotationsDone.Length][];
+        for (int i = 0; i < rotationsDone.Length; i++)
+            rotationsDone[i] = new int[level.pipeRotationsDone[i].Length];
         for (int i = 0; i < pipes.Length; i++) {
             pipes[i].SetRotation(level.pipeInitialRotations[i / grid.constraintCount][i % grid.constraintCount]);
-            Debug.Log(pipes[i].gameObject.name);
             pipes[i].SetTileId(level.pipeStates[i / grid.constraintCount][i % grid.constraintCount]);
+            pipes[i].OnPipeRotate = () => CheckDone();
+            if (mirrored && level.pipeRotationsDone[i / grid.constraintCount][i % grid.constraintCount]!=-1) {
+                rotationsDone[i / grid.constraintCount][i % grid.constraintCount] = (level.pipeRotationsDone[i / grid.constraintCount][i % grid.constraintCount] + 2) % 4;
+            } else {
+                rotationsDone[i / grid.constraintCount][i % grid.constraintCount] = level.pipeRotationsDone[i / grid.constraintCount][i % grid.constraintCount];
+            }
         }
 
-        OnDone = onDone;
+        OnDone = onDone;        
     }
 
 
@@ -46,18 +58,18 @@ public class PipesManager : MonoBehaviour
 #endif
 
     void CheckDone() {
-        //Debug.Log("CheckDone");
+        Debug.Log("CheckDone");
         for (int i = 0; i < pipes.Length; i++) {
-            //Debug.Log((i / grid.constraintCount) + "," + (i % grid.constraintCount));
-            if (level.pipeRotationsDone[i / grid.constraintCount][i % grid.constraintCount] > -1 && level.pipeStates[i / grid.constraintCount][i % grid.constraintCount]>0) {                
+            Debug.Log((i % grid.constraintCount) + "," + (i / grid.constraintCount));
+            if (rotationsDone[i / grid.constraintCount][i % grid.constraintCount] > -1 && level.pipeStates[i / grid.constraintCount][i % grid.constraintCount]>0) {                
                 if (level.pipeStates[i / grid.constraintCount][i % grid.constraintCount] == 2) {
-                    if (pipes[i].RotationState != level.pipeRotationsDone[i / grid.constraintCount][i % grid.constraintCount]) {
-                        //Debug.Log((i / grid.constraintCount)+","+ (i % grid.constraintCount)+": "+level.pipeRotationsDone[i / grid.constraintCount][i % grid.constraintCount] + " == " + pipes[i].RotationState);
+                    if (pipes[i].RotationState != rotationsDone[i / grid.constraintCount][i % grid.constraintCount]) {
+                        Debug.Log((i % grid.constraintCount)+","+ (i / grid.constraintCount) + ": "+ rotationsDone[i / grid.constraintCount][i % grid.constraintCount] + " == " + pipes[i].RotationState);
                         return;
                     }                        
                 } else if (level.pipeStates[i / grid.constraintCount][i % grid.constraintCount] != 4) {
-                    if (pipes[i].RotationState % 2 != level.pipeRotationsDone[i / grid.constraintCount][i % grid.constraintCount] % 2) {
-                        //Debug.Log((i / grid.constraintCount) + "," + (i % grid.constraintCount) + ": " + level.pipeRotationsDone[i / grid.constraintCount][i % grid.constraintCount] + " == " + pipes[i].RotationState);
+                    if (pipes[i].RotationState % 2 != rotationsDone[i / grid.constraintCount][i % grid.constraintCount] % 2) {
+                        Debug.Log((i % grid.constraintCount)+ "," + (i / grid.constraintCount) + ": " + rotationsDone[i / grid.constraintCount][i % grid.constraintCount] + " == " + pipes[i].RotationState);
                         return;
                     }
                 }
