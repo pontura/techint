@@ -3870,7 +3870,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2083210912918708264, guid: af2dbc9036e0c4046843bf6d74763c19, type: 3}
       propertyPath: m_fontColor32.rgba
-      value: 3335112388
+      value: 4291413700
       objectReference: {fileID: 0}
     - target: {fileID: 2183857742777093156, guid: af2dbc9036e0c4046843bf6d74763c19, type: 3}
       propertyPath: m_RaycastTarget
@@ -4757,6 +4757,10 @@ PrefabInstance:
       propertyPath: canvas
       value: 
       objectReference: {fileID: 1109424215}
+    - target: {fileID: 1290487612931769160, guid: 39bb68fa0f8fd5045a248a1fe7d86964, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1428992545678128252, guid: 39bb68fa0f8fd5045a248a1fe7d86964, type: 3}
       propertyPath: canvas
       value: 
