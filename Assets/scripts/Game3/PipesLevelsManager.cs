@@ -6,8 +6,15 @@ using System.Linq;
 public class PipesLevelsManager : MonoBehaviour
 {
     [SerializeField] string filename = "pipeLevel.json";
-    [SerializeField] List<PipeLevel> levels;
-    [SerializeField] PipeLevel level;
+    [SerializeField] PipeLevels levels;
+    [field: SerializeField] public PipeLevel CurrentLevel { get; private set; }
+
+    [Serializable]
+    public class PipeLevels
+    {
+        public PipeLevel[] pipeLevels;
+    }
+
 
     [Serializable]
     public class PipeLevel
@@ -47,18 +54,14 @@ public class PipesLevelsManager : MonoBehaviour
         if (System.IO.File.Exists(filePath)) {
             string dataAsJson = System.IO.File.ReadAllText(filePath);
             UnityEngine.Debug.Log(dataAsJson);
-            level = JsonUtility.FromJson<PipeLevel>(dataAsJson);
-            Debug.Log(level == null);
-            Debug.Log(level.pipeInitialRotationsData[0]);
+            levels = JsonUtility.FromJson<PipeLevels>(dataAsJson);
+            CurrentLevel = levels.pipeLevels[0];
+            Debug.Log(levels == null);
             
-            level.ParseStateData();
-            level.ParseInitialRotation();
-            level.ParseRotationDone();
+            CurrentLevel.ParseStateData();
+            CurrentLevel.ParseInitialRotation();
+            CurrentLevel.ParseRotationDone();
 
         }
-    }
-
-    public PipeLevel GetCurrentLevel() {
-        return level;
-    }
+    }    
 }

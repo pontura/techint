@@ -27,17 +27,20 @@ public class PipesManager : MonoBehaviour
     }
 
     public void Init(System.Action onDone) {
-        level = levelsManager.GetCurrentLevel();
+        level = levelsManager.CurrentLevel;
         pipes = pipesContainer.GetComponentsInChildren<Pipe>();
         rotationsDone = new int[level.pipeRotationsDone.Length][];
         for (int i = 0; i < rotationsDone.Length; i++)
             rotationsDone[i] = new int[level.pipeRotationsDone[i].Length];
         for (int i = 0; i < pipes.Length; i++) {
-            pipes[i].SetRotation(level.pipeInitialRotations[i / grid.constraintCount][i % grid.constraintCount]);
+            if (mirrored)
+                pipes[i].SetRotation((level.pipeInitialRotations[i / grid.constraintCount][i % grid.constraintCount]*-1+8) % 4);
+            else 
+                pipes[i].SetRotation(level.pipeInitialRotations[i / grid.constraintCount][i % grid.constraintCount]);                   
             pipes[i].SetTileId(level.pipeStates[i / grid.constraintCount][i % grid.constraintCount]);
             pipes[i].OnPipeRotate = () => CheckDone();
             if (mirrored && level.pipeRotationsDone[i / grid.constraintCount][i % grid.constraintCount]!=-1) {
-                rotationsDone[i / grid.constraintCount][i % grid.constraintCount] = (level.pipeRotationsDone[i / grid.constraintCount][i % grid.constraintCount] + 2) % 4;
+                rotationsDone[i / grid.constraintCount][i % grid.constraintCount] = (level.pipeRotationsDone[i / grid.constraintCount][i % grid.constraintCount] * -1 + 8) % 4;
             } else {
                 rotationsDone[i / grid.constraintCount][i % grid.constraintCount] = level.pipeRotationsDone[i / grid.constraintCount][i % grid.constraintCount];
             }
