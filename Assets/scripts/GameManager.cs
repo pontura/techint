@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using System.IO;
+using UnityEditor.PackageManager.UI;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using static UnityEditor.PlayerSettings;
@@ -180,8 +181,10 @@ public class GameManager : MonoBehaviour
     {
         state = states.game;
     }
+    bool winDone;
     public void Win(int player)
     {
+        winDone = false;
         Events.OnWinLevel(player);
 
         string win = GameManager.Instance.settings.win;
@@ -195,6 +198,8 @@ public class GameManager : MonoBehaviour
     }
     public void NextGame()
     {
+        if (winDone) return;
+        winDone = true;
         Events.OnExitLevel();
         Invoke("ReadyForNextGame", 1);
     }
