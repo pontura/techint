@@ -6,10 +6,12 @@ public class Gameplay : MonoBehaviour
     private void Awake()
     {
         Events.OnWinLevel += OnWinLevel;
+        Events.OnExitLevel += OnExitLevel;
     }
     private void OnDestroy()
     {
         Events.OnWinLevel -= OnWinLevel;
+        Events.OnExitLevel -= OnExitLevel;
     }
 
     private void OnWinLevel(int _playerID)
@@ -38,5 +40,10 @@ public class Gameplay : MonoBehaviour
     {
         if (GetComponent<Animator>() != null)
             GetComponent<Animator>().Play("Lose");
+    }
+    void OnExitLevel()
+    {
+        if (GetComponent<Animator>() != null)
+            GetComponent<Animator>().Play("Exit");
     }
 }

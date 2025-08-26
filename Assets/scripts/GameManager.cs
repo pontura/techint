@@ -195,10 +195,14 @@ public class GameManager : MonoBehaviour
     }
     public void NextGame()
     {
-        levelId ++;
+        Events.OnExitLevel();
+        Invoke("ReadyForNextGame", 1);
+    }
+    public void ReadyForNextGame()
+    {
+        levelId++;
         ui.SetGamePlay(levelId);
         Events.OnInitLevel(levelId);
-
     }
     void OnNext()
     {
