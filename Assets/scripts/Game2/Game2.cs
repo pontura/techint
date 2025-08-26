@@ -12,7 +12,7 @@ public class Game2 : Gameplay
     [SerializeField] TriviaLine line;
     [SerializeField] TriviaUI ui;
 
-    private void Awake()
+    private void Start()
     {
         ui.Init(this);
         line.Init(this);
@@ -38,6 +38,7 @@ public class Game2 : Gameplay
     }
     public void OnTriviaAnswer(bool isCorrect)
     {
+        print("OnTriviaAnswer " + isCorrect);
         if (isCorrect)
         {
             line.Play();

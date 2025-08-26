@@ -5,6 +5,7 @@ using static SettingsData;
 
 public class TriviaUI : MonoBehaviour
 {
+    [SerializeField] SimpleButton[] buttons;
     [SerializeField] TMPro.TMP_Text fieldTitle;
     [SerializeField] TMPro.TMP_Text field;
     [SerializeField] Animator resultsAnim;
@@ -14,12 +15,15 @@ public class TriviaUI : MonoBehaviour
     TriviaData d;
     int v;
     float gotoValue;
-    bool done;
+    public bool done;
 
     public void Init(Game2 game)
     {
         this.game = game;
-        gameObject.SetActive(false); 
+        gameObject.SetActive(false);
+
+        buttons[0].Init(0, Add);
+        buttons[1].Init(0, Remove);
     }
     public void SetInitialValue()
     {
@@ -28,7 +32,7 @@ public class TriviaUI : MonoBehaviour
         CalculateSlider();
         slider.value = gotoValue;
         field.text = v.ToString();
-    }
+    } 
     private void Update()
     {
         if (this.d == null) return;
@@ -42,10 +46,13 @@ public class TriviaUI : MonoBehaviour
         field.text = v.ToString();
         SetInitialValue();
     }
+    void Add(int a) { OnClicked(true); }
+    void Remove(int a){ OnClicked(false); }
+
     public void OnClicked(bool add)
     {
-        if (done) return;
         print("OnClicked " + add);
+        if (done) return;
 
         if (d.trivia_valor_inicial > d.trivia_valor && add)
             MaxLimitReached();

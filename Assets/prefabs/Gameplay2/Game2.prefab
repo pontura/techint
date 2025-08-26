@@ -17,7 +17,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &698299283171896828
 RectTransform:
   m_ObjectHideFlags: 0
@@ -55,10 +55,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 053daa2bc82881941b5ae8ba2b6f136b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  buttons:
+  - {fileID: 4180480927906005154}
+  - {fileID: 3576070419213975319}
   fieldTitle: {fileID: 4803289855242927855}
   field: {fileID: 7712624357098150436}
   resultsAnim: {fileID: 7298792813749007992}
   slider: {fileID: 3502245422110081219}
+  done: 0
 --- !u!95 &7298792813749007992
 Animator:
   serializedVersion: 7
@@ -264,7 +268,7 @@ RectTransform:
   m_Father: {fileID: 347366799075452968}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 6.535}
   m_SizeDelta: {x: 12.2, y: 5.0899997}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -339,7 +343,7 @@ RectTransform:
   m_Father: {fileID: 154795619677449422}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 10, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -398,7 +402,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &3459374131554107013
 RectTransform:
   m_ObjectHideFlags: 0
@@ -471,6 +475,7 @@ GameObject:
   - component: {fileID: 4977182103420728562}
   - component: {fileID: 6619557082989802919}
   - component: {fileID: 6050736876480302794}
+  - component: {fileID: 3576070419213975319}
   m_Layer: 5
   m_Name: down
   m_TagString: Untagged
@@ -607,6 +612,19 @@ MonoBehaviour:
   m_EffectColor: {r: 0, g: 0.12263858, b: 0.261, a: 0.7176471}
   m_EffectDistance: {x: 5, y: -5}
   m_UseGraphicAlpha: 1
+--- !u!114 &3576070419213975319
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3035971937673871982}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 88ba11ef9d6f0024098d63b31b2d6c14, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  done: 0
 --- !u!1 &3212432846207957019
 GameObject:
   m_ObjectHideFlags: 0
@@ -1298,6 +1316,7 @@ GameObject:
   - component: {fileID: 1827646032198364697}
   - component: {fileID: 9078855151401253976}
   - component: {fileID: 2754504163695851193}
+  - component: {fileID: 4180480927906005154}
   m_Layer: 5
   m_Name: up
   m_TagString: Untagged
@@ -1406,19 +1425,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1827646032198364697}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 8765766025364003146}
-        m_TargetAssemblyTypeName: TriviaUI, Assembly-CSharp
-        m_MethodName: OnClicked
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 1
-        m_CallState: 2
+      m_Calls: []
 --- !u!114 &2754504163695851193
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1434,6 +1441,19 @@ MonoBehaviour:
   m_EffectColor: {r: 0, g: 0.12263858, b: 0.261, a: 0.7176471}
   m_EffectDistance: {x: 5, y: -5}
   m_UseGraphicAlpha: 1
+--- !u!114 &4180480927906005154
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6993746012331299048}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 88ba11ef9d6f0024098d63b31b2d6c14, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  done: 0
 --- !u!1 &7590077797673074729
 GameObject:
   m_ObjectHideFlags: 0
