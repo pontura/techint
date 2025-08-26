@@ -10,6 +10,8 @@ public class Pipe : ButtonLidar
     [field: SerializeField] public int TileId { get; private set; }
     [field: SerializeField] public int RotationState { get; private set; }
 
+    public System.Action OnPipeRotate;
+
     public override void OnClicked() {
 
         Debug.Log("pipeClicked");
@@ -22,7 +24,7 @@ public class Pipe : ButtonLidar
             RotationState++;
             RotationState = RotationState % 4;
             Rotate();
-            Events.OnPipeRotate();
+            OnPipeRotate();
         }
 #else
         RotationState++;
