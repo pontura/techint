@@ -55,7 +55,7 @@ public class PipesManager : MonoBehaviour
                         //Debug.Log((i / grid.constraintCount)+","+ (i % grid.constraintCount)+": "+level.pipeRotationsDone[i / grid.constraintCount][i % grid.constraintCount] + " == " + pipes[i].RotationState);
                         return;
                     }                        
-                } else {
+                } else if (level.pipeStates[i / grid.constraintCount][i % grid.constraintCount] != 4) {
                     if (pipes[i].RotationState % 2 != level.pipeRotationsDone[i / grid.constraintCount][i % grid.constraintCount] % 2) {
                         //Debug.Log((i / grid.constraintCount) + "," + (i % grid.constraintCount) + ": " + level.pipeRotationsDone[i / grid.constraintCount][i % grid.constraintCount] + " == " + pipes[i].RotationState);
                         return;
