@@ -27,6 +27,7 @@ public class PipesManager : MonoBehaviour
         pipes = pipesContainer.GetComponentsInChildren<Pipe>();
         for (int i = 0; i < pipes.Length; i++) {
             pipes[i].SetRotation(level.pipeInitialRotations[i / grid.constraintCount][i % grid.constraintCount]);
+            Debug.Log(pipes[i].gameObject.name);
             pipes[i].SetTileId(level.pipeStates[i / grid.constraintCount][i % grid.constraintCount]);
         }
 
@@ -63,7 +64,23 @@ public class PipesManager : MonoBehaviour
             }
         }
         Debug.Log("Complete!");
+        SetWinState();
+        Invoke(nameof(OnComplete), GameManager.Instance.settings.winDuration);
+    }
+
+    void OnComplete() {
         OnDone();
+    }
+
+    void SetWinState() {
+        for (int i = 0; i < pipes.Length; i++) {
+            //Debug.Log((i / grid.constraintCount) + "," + (i % grid.constraintCount));
+            if (level.pipeRotationsDone[i / grid.constraintCount][i % grid.constraintCount] > -1) {
+                pipes[i].SetWin();
+            } else {
+                pipes[i].SetOff();
+            }
+        }
     }
 
     void ExportData(bool tiles) {
@@ -72,7 +89,6 @@ public class PipesManager : MonoBehaviour
         for(int i = 0; i < pipes.Length; i++) { 
             if (i % grid.constraintCount == 0)
                 json += "\"";
-            Debug.Log(pipes[i].gameObject.name);
             if(tiles)
                 json += "" + pipes[i].TileId;
             else

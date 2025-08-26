@@ -6,7 +6,7 @@ using UnityEngine.EventSystems;
 
 public class Pipe : ButtonLidar
 {
-    [SerializeField] List<GameObject> tiles;
+    [SerializeField] List<Animator> tiles;
     [field: SerializeField] public int TileId { get; private set; }
     [field: SerializeField] public int RotationState { get; private set; }
 
@@ -48,6 +48,14 @@ public class Pipe : ButtonLidar
 
     void SetTile() {
         for (int i = 0; i < tiles.Count; i++)
-            tiles[i].SetActive(i == TileId);
+            tiles[i].gameObject.SetActive(i == TileId);
+    }
+
+    public void SetWin() {
+        tiles[TileId].Play("on",0,0);
+    }
+
+    public void SetOff() {
+        tiles[TileId].Play("off", 0, 0);
     }
 }
