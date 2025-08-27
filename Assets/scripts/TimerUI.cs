@@ -26,8 +26,9 @@ public class TimerUI : MonoBehaviour
     }
     void SetField()
     {
+        string timeText = YaguarLib.Xtras.Utils.FormatTime(timer);
         foreach (var field in fields)
-            field.text = YaguarLib.Xtras.Utils.FormatTime(timer);
+            field.text = timeText;
 
         foreach (ProgressBar progressBar in progressBars)
             progressBar.SetValue(timer/ totalTime);

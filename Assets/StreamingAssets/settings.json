@@ -1,8 +1,8 @@
 {
 	"timeForSummary":5,	
-	"time_game_1":300,	
-	"time_game_2":300,	
-	"time_game_3":300,
+	"time_game_1":30,	
+	"time_game_2":30,	
+	"time_game_3":30,
 
 	"slot1":"Moja los terrenos para preparar una superficie compacta y lisa para la construcción de la planta.",
 	"slot2":"Utilizados para tender y posicionar los ductos del gasoducto que exportará el gas producido en la planta.",
