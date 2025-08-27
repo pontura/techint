@@ -7,14 +7,14 @@ public class PipesGame : Gameplay
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     public override void InitGame() {
         done = false;
-        pipesManager.Init(Done);
+        pipesManager.Init(Win);
     }
 
-    void Done()
+    void Win()
     {
         print("Done" + done);
         if (done) return;
         done = true;
-        GameManager.Instance.NextGame();
+        GameManager.Instance.Win(playerID);
     }
 }

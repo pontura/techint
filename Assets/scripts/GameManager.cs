@@ -166,7 +166,7 @@ public class GameManager : MonoBehaviour
     public void Intro()
     {
         field.gameObject.SetActive(false);
-        Cursor.visible = true;
+       // Cursor.visible = true;
         state = states.intro;
         uiManager.SetScreen(state);
     }
@@ -210,6 +210,7 @@ public class GameManager : MonoBehaviour
     }
     public void NextGame()
     {
+        print("NextGame " + winDone);
         if (winDone) return;
         winDone = true;
         Events.OnExitLevel();
@@ -218,6 +219,7 @@ public class GameManager : MonoBehaviour
     public void ReadyForNextGame()
     {
         levelId++;
+        print("ReadyForNextGame " + levelId);
         ui.SetGamePlay(levelId);
         Events.OnInitLevel(levelId);
     }
@@ -266,7 +268,9 @@ public class GameManager : MonoBehaviour
     }
     public int GetWinner()
     {
-        if(score_player1>score_player2) return score_player1;
-        else return score_player2;
+        if(score_player1>score_player2) 
+            return 1;
+        else 
+            return 2;
     }
 }

@@ -79,11 +79,7 @@ public class PipesManager : MonoBehaviour
             }
         }
         Debug.Log("Complete!");
-        SetWinState();
-        Invoke(nameof(OnComplete), GameManager.Instance.settings.winDuration);
-    }
-
-    void OnComplete() {
+        SetWinState(); 
         OnDone();
     }
 

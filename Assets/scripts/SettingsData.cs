@@ -78,8 +78,9 @@ public class SettingsData
         {
             case 0: return level_1_title;
             case 1: return level_2_title;
-            default: return level_3_title;
+            case 2: return level_3_title;
         }
+        return "";
     }
     public string GetResult(bool _win)
     {

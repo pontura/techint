@@ -22,8 +22,11 @@ public class GameUI : MonoBehaviour
     {
         gameplayManager.Init(levelID);
         string title = GameManager.Instance.settings.GetTitle(levelID);
-        SetTutorial(title);
-        scoreUI.SetAciveState(levelID);
+        if (title != "")
+        {
+            SetTutorial(title);
+            scoreUI.SetAciveState(levelID);
+        }
     }
     public void SetTutorial(string title)
     {
