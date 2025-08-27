@@ -1,4 +1,6 @@
 
+using UnityEngine;
+
 public class GameEnd : Gameplay
 {
     public TMPro.TMP_Text[] titles;
@@ -9,9 +11,16 @@ public class GameEnd : Gameplay
         foreach (TMPro.TMP_Text t in titles)
         {
             if (winner == playerID)
+            {
+
                 t.text = GameManager.Instance.settings.gameEnd_win;
+                GetComponent<Animator>().Play("win");
+            }
             else
+            {
                 t.text = GameManager.Instance.settings.gameEnd_lose;
+                GetComponent<Animator>().Play("lose");
+            }
         }
         Invoke("Done", GameManager.Instance.settings.timeForSummary);
     }
