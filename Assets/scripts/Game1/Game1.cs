@@ -12,7 +12,6 @@ public class Game1 : Gameplay
 
     public override void InitGame()
     {
-        base.InitGame();
         items = new List<int>();
         id = 0;
         int a = 0;

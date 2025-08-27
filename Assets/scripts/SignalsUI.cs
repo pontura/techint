@@ -19,7 +19,6 @@ public class SignalsUI : MonoBehaviour
     }
     void OnSignal(string text, int duration, System.Action OnDone)
     {
-        YaguarLib.Events.Events.OnPlaySoundInChannel(YaguarLib.Audio.AudioManager.types.SIGNAL_ENTRY, YaguarLib.Audio.AudioManager.channels.UI);
         this.OnDone = OnDone;
         asset.SetActive(true);
 
@@ -29,8 +28,7 @@ public class SignalsUI : MonoBehaviour
         Invoke("OnSignalDone", duration);
     }
     void OnSignalByPlayer(string text, int player, int duration, System.Action OnDone)
-    {
-        YaguarLib.Events.Events.OnPlaySoundInChannel(YaguarLib.Audio.AudioManager.types.SIGNAL_ENTRY, YaguarLib.Audio.AudioManager.channels.UI);
+    {        
         this.OnDone = OnDone;
         asset.SetActive(true);
 
@@ -43,5 +41,10 @@ public class SignalsUI : MonoBehaviour
         asset.SetActive(false);
         if (OnDone != null)
             OnDone();
+    }
+
+    public void PlaySignalSfx() {
+        Debug.Log("#PlaySignalSfx");
+        YaguarLib.Events.Events.OnPlaySoundInChannel(YaguarLib.Audio.AudioManager.types.SIGNAL_ENTRY, YaguarLib.Audio.AudioManager.channels.UI);
     }
 }

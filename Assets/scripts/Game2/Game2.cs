@@ -14,7 +14,6 @@ public class Game2 : Gameplay
 
     private void Start()
     {
-        base.InitGame();
         ui.Init(this);
         line.Init(this);
     }
