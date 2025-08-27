@@ -58,4 +58,9 @@ public class Gameplay : MonoBehaviour
     public void PlayGameWinSfx() {
         YaguarLib.Events.Events.OnPlaySoundInChannel(YaguarLib.Audio.AudioManager.types.GAME_WIN, YaguarLib.Audio.AudioManager.channels.GAME);
     }
+
+    public void PlaySignalSfx() {
+        Debug.Log("#PlaySignalSfx");
+        YaguarLib.Events.Events.OnPlaySoundInChannel(YaguarLib.Audio.AudioManager.types.SIGNAL_ENTRY, YaguarLib.Audio.AudioManager.channels.UI);
+    }
 }
