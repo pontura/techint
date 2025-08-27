@@ -22,35 +22,35 @@
 	"level_1_title": "Construí tu planta energética.",
 	"level_2_title": "Ahora realizá la perforación.",	
 	
-	"gameEnd_win": "Muy bien.. Ganaste!",
-	"gameEnd_lose": "Muy mal.. perdiste! Lo importante es divertirse",	
+	"gameEnd_win": "Muy bien¡Ganaste!",
+	"gameEnd_lose": "¡Oops! Mejor suerte la próxima.",	
 	
 	"level_3_title": "Es hora de construir el ducto.",	
 	"triviaSpeed": 2,	
 	"trivias":
 	[
 		{
-			"trivia": "Acá va la consigna 1",
+			"trivia": "Alerta: El caudal está bajo.",
 			"trivia_valor": 250,
 			"trivia_valor_inicial": 200,
 			"trivia_valor_add": 25
 		},	
 		{	
-			"trivia": "Acá va la consigna 2",
-			"trivia_valor": 250,
-			"trivia_valor_inicial": 300,
+			"trivia": "Alerta: La presión está alta.",
+			"trivia_valor": 500,
+			"trivia_valor_inicial": 575,
 			"trivia_valor_add": 25
 		},	
 		{	
-			"trivia": "Acá va la consigna 3",
+			"trivia": "Alerta: El caudal está demasiado bajo.",
 			"trivia_valor": 250,
 			"trivia_valor_inicial": 150,
 			"trivia_valor_add": 25
 		},	
 		{	
-			"trivia": "Acá va la consigna 4",
-			"trivia_valor": 250,
-			"trivia_valor_inicial": 100,
+			"trivia": "Alerta: La presión está demasiado alta.",
+			"trivia_valor": 500,
+			"trivia_valor_inicial": 625,
 			"trivia_valor_add": 25
 		}
 	]
