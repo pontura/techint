@@ -12,6 +12,10 @@
 	"slot6":"Text del 6",
 	"slot7":"Text del 7",	
 	
+	"level_1_lateral":"Texto lateral 1",
+	"level_2_lateral":"Texto lateral 2",
+	"level_3_lateral":"Texto lateral 3",	
+	
 	"delay_to_read_gameTitle":3,	
 	"timeOverDuration":2,	
 	"winDuration":6,	

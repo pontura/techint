@@ -8,19 +8,18 @@ public class GameEnd : Gameplay
     public override void InitGame()
     {
         int winner = GameManager.Instance.GetWinner();
+
+        if (winner == playerID)
+            GetComponent<Animator>().Play("win");
+        else
+            GetComponent<Animator>().Play("lose");
+
         foreach (TMPro.TMP_Text t in titles)
         {
             if (winner == playerID)
-            {
-
                 t.text = GameManager.Instance.settings.gameEnd_win;
-                GetComponent<Animator>().Play("win");
-            }
             else
-            {
                 t.text = GameManager.Instance.settings.gameEnd_lose;
-                GetComponent<Animator>().Play("lose");
-            }
         }
         Invoke("Done", GameManager.Instance.settings.timeForSummary);
     }

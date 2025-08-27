@@ -2249,6 +2249,9 @@ MonoBehaviour:
     level_1_title: 
     level_2_title: 
     level_3_title: 
+    level_1_lateral: 
+    level_2_lateral: 
+    level_3_lateral: 
     timeOver: 
     delay_to_read_gameTitle: 0
     timeOverDuration: 0
@@ -5836,7 +5839,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6887213529574538624, guid: 2b79c3adfb8d09e4b8ec10b243d992d0, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -6647,6 +6650,10 @@ PrefabInstance:
       propertyPath: canvas
       value: 
       objectReference: {fileID: 1109424215}
+    - target: {fileID: 7911934724739410928, guid: 39bb68fa0f8fd5045a248a1fe7d86964, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8189003171186601205, guid: 39bb68fa0f8fd5045a248a1fe7d86964, type: 3}
       propertyPath: canvas
       value: 

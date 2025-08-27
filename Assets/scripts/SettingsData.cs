@@ -19,6 +19,11 @@ public class SettingsData
     public string level_1_title;
     public string level_2_title;
     public string level_3_title;
+
+    public string level_1_lateral;
+    public string level_2_lateral;
+    public string level_3_lateral;
+
     public string timeOver;
     public int delay_to_read_gameTitle;
     public int timeOverDuration;
@@ -86,5 +91,15 @@ public class SettingsData
     {
         if (_win) return win;
         else return lose;
+    }
+    public string GetLateralText(int levelID)
+    {
+        switch (levelID)
+        {
+            case 0: return level_1_lateral;
+            case 1: return level_2_lateral;
+            case 2: return level_3_lateral;
+        }
+        return "";
     }
 }

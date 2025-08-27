@@ -41,7 +41,13 @@ public class LateralManager : MonoBehaviour
     private void OnWinLevelReady()
     {
         Reset();
-        gamevers[GameManager.Instance.levelId].SetActive(true);
+        GameObject go = gamevers[GameManager.Instance.levelId];
+        go.SetActive(true);
+
+        TMPro.TMP_Text field = go.GetComponentInChildren<TMPro.TMP_Text>();
+
+        if(field != null)
+            field.text = GameManager.Instance.settings.GetLateralText(GameManager.Instance.levelId);
     }
     private void Reset()
     {
