@@ -1,5 +1,6 @@
 using System;
 using Unity.VisualScripting;
+using UnityEngine.Rendering.LookDev;
 
 [Serializable]
 public class SettingsData
@@ -26,10 +27,28 @@ public class SettingsData
     public string win;
     public string lose;
 
-    public string trivia_1;
-    public int trivia_1_valor;
-    public int trivia_1_valor_inicial_1;
-    public int trivia_1_valor_inicial_2;
+    public string slot1;
+    public string slot2; 
+    public string slot3;
+    public string slot4;
+    public string slot5;
+    public string slot6;
+    public string slot7;
+
+    public string GetSlotText(int id)
+    {
+        switch(id)
+        {
+            case 1: return slot1;
+            case 2: return slot2;
+            case 3: return slot3;
+            case 4: return slot4;
+            case 5: return slot5;
+            case 6: return slot6;
+            case 7: return slot7;
+        }
+        return "";
+    }
 
     public float triviaSpeed;
     public TriviaData[] trivias;

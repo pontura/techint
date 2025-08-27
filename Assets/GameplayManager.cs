@@ -12,6 +12,7 @@ public class GameplayManager : MonoBehaviour
 
     public void Init(int id)
     {
+        print("init " + id);
         foreach (Gameplay g in game1) g.SetOn(false);
         foreach (Gameplay g in game2) g.SetOn(false);
         foreach (Gameplay g in game3) g.SetOn(false);

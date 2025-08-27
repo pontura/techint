@@ -4,7 +4,7 @@ public class Slot : ButtonLidar
 {
     public int slotID;
     Animator anim;
-
+    [SerializeField] TMPro.TMP_Text field;
     private void Awake()
     {
         anim = GetComponent<Animator>();
@@ -23,6 +23,11 @@ public class Slot : ButtonLidar
     public void SetActive()
     {
         anim.Play("active");
+        if (field != null)
+        {
+            string text = GameManager.Instance.settings.GetSlotText(slotID);
+            field.text = text;
+        }
     }
     public void Inactive()
     {

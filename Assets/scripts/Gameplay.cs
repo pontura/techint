@@ -3,6 +3,7 @@ using UnityEngine;
 
 public class Gameplay : MonoBehaviour
 {
+    bool win;
     private void Awake()
     {
         Events.OnWinLevel += OnWinLevel;
@@ -33,17 +34,19 @@ public class Gameplay : MonoBehaviour
     }
     public void Win()
     {
-        if(GetComponent<Animator>() != null)
+        win = true;
+        if (GetComponent<Animator>() != null)
             GetComponent<Animator>().Play("Win");
     }
     public void Lose()
     {
+        win = false;
         if (GetComponent<Animator>() != null)
             GetComponent<Animator>().Play("Lose");
     }
     void OnExitLevel()
     {
-        if (GetComponent<Animator>() != null)
+        if (win && GetComponent<Animator>() != null)
             GetComponent<Animator>().Play("Exit");
     }
 }

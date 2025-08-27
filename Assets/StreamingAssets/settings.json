@@ -2,7 +2,16 @@
 	"timeForSummary":5,	
 	"time_game_1":300,	
 	"time_game_2":300,	
-	"time_game_3":300,		
+	"time_game_3":300,
+
+	"slot1":"Text del 1",
+	"slot2":"Text del 2",
+	"slot3":"Text del 3",
+	"slot4":"Text del 4",
+	"slot5":"Text del 5",
+	"slot6":"Text del 6",
+	"slot7":"Text del 7",	
+	
 	"delay_to_read_gameTitle":3,	
 	"timeOverDuration":2,	
 	"winDuration":6,	
