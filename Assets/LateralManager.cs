@@ -7,6 +7,8 @@ public class LateralManager : MonoBehaviour
     public GameObject[] games;
     public GameObject[] gamevers;
 
+    [SerializeField] bool isLeft;
+
     void Start()
     {
         Events.OnWinLevel += OnWinLevel;
@@ -47,7 +49,7 @@ public class LateralManager : MonoBehaviour
         TMPro.TMP_Text field = go.GetComponentInChildren<TMPro.TMP_Text>();
 
         if(field != null)
-            field.text = GameManager.Instance.settings.GetLateralText(GameManager.Instance.levelId);
+            field.text = GameManager.Instance.settings.GetLateralText(isLeft, GameManager.Instance.levelId);
     }
     private void Reset()
     {

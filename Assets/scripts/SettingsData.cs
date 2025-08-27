@@ -20,9 +20,13 @@ public class SettingsData
     public string level_2_title;
     public string level_3_title;
 
-    public string level_1_lateral;
-    public string level_2_lateral;
-    public string level_3_lateral;
+    public string level_1_lateral_left;
+    public string level_2_lateral_left;
+    public string level_3_lateral_left;
+
+    public string level_1_lateral_right;
+    public string level_2_lateral_right;
+    public string level_3_lateral_right;
 
     public string timeOver;
     public int delay_to_read_gameTitle;
@@ -92,13 +96,13 @@ public class SettingsData
         if (_win) return win;
         else return lose;
     }
-    public string GetLateralText(int levelID)
+    public string GetLateralText(bool isLeft, int levelID)
     {
         switch (levelID)
         {
-            case 0: return level_1_lateral;
-            case 1: return level_2_lateral;
-            case 2: return level_3_lateral;
+            case 0: return isLeft ? level_1_lateral_left : level_1_lateral_right;
+            case 1: return isLeft ? level_2_lateral_left : level_2_lateral_right;
+            case 2: return isLeft ? level_3_lateral_left : level_3_lateral_right;
         }
         return "";
     }
