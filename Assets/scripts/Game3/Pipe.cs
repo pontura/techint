@@ -21,12 +21,14 @@ public class Pipe : ButtonLidar
             TileId = TileId % 5;
             SetTile();
         } else {
+            YaguarLib.Events.Events.OnPlaySoundInChannel(YaguarLib.Audio.AudioManager.types.CLICK_NEUTRAL, YaguarLib.Audio.AudioManager.channels.UI);
             RotationState++;
             RotationState = RotationState % 4;
             Rotate();
             OnPipeRotate();
         }
 #else
+        YaguarLib.Events.Events.OnPlaySoundInChannel(YaguarLib.Audio.AudioManager.types.CLICK_NEUTRAL, YaguarLib.Audio.AudioManager.channels.UI);
         RotationState++;
         RotationState = RotationState % 4;
         Rotate();

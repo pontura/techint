@@ -30,10 +30,12 @@ public class Gameplay : MonoBehaviour
     }    
     public virtual void InitGame()
     {
+        YaguarLib.Events.Events.OnPlaySoundInChannel(YaguarLib.Audio.AudioManager.types.GAME_ENTRY, YaguarLib.Audio.AudioManager.channels.GAME);
         Debug.Log("init");
     }
     public void Win()
     {
+        YaguarLib.Events.Events.OnPlaySoundInChannel(YaguarLib.Audio.AudioManager.types.GAME_WIN, YaguarLib.Audio.AudioManager.channels.GAME);
         win = true;
         if (GetComponent<Animator>() != null)
             GetComponent<Animator>().Play("Win");

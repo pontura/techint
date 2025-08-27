@@ -18,12 +18,12 @@ namespace YaguarLib.Audio
         }
         public enum types
         {
-            UI_GENERIC,
-            UI_SWIPE,
-            TRANSITION,
-            REWARD,
-            POPUP,
-            CANCEL,
+            CLICK_GOOD,
+            CLICL_BAD,
+            CLICK_NEUTRAL,
+            GAME_ENTRY,
+            SIGNAL_ENTRY,
+            GAME_WIN,
             NONE
         }
        

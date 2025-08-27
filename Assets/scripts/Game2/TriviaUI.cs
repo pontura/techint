@@ -51,7 +51,7 @@ public class TriviaUI : MonoBehaviour
 
     public void OnClicked(bool add)
     {
-        print("OnClicked " + add);
+        print("OnClicked " + add);        
         if (done) return;
 
         if (d.trivia_valor_inicial > d.trivia_valor && add)
@@ -74,9 +74,11 @@ public class TriviaUI : MonoBehaviour
                 resultsAnim.Play("triviaOut");
                 Invoke("Reset", 0.25f);
                 game.OnTriviaAnswer(true);
+                YaguarLib.Events.Events.OnPlaySoundInChannel(YaguarLib.Audio.AudioManager.types.CLICK_GOOD, YaguarLib.Audio.AudioManager.channels.UI);
             }
             else
             {
+                YaguarLib.Events.Events.OnPlaySoundInChannel(YaguarLib.Audio.AudioManager.types.CLICK_NEUTRAL, YaguarLib.Audio.AudioManager.channels.UI);
                 game.OnTriviaAnswer(false);
             }
         }
@@ -92,6 +94,7 @@ public class TriviaUI : MonoBehaviour
     }
     void MaxLimitReached()
     {
+        YaguarLib.Events.Events.OnPlaySoundInChannel(YaguarLib.Audio.AudioManager.types.CLICL_BAD, YaguarLib.Audio.AudioManager.channels.UI);
         resultsAnim.Play("MaxLimitReached");
     }
     void Reset()

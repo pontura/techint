@@ -12,6 +12,7 @@ public class Game1 : Gameplay
 
     public override void InitGame()
     {
+        base.InitGame();
         items = new List<int>();
         id = 0;
         int a = 0;
@@ -44,6 +45,7 @@ public class Game1 : Gameplay
         if(items[id] == buttonID)
         {
             print("correct " + id);
+            YaguarLib.Events.Events.OnPlaySoundInChannel(YaguarLib.Audio.AudioManager.types.CLICK_GOOD, YaguarLib.Audio.AudioManager.channels.UI);
             buttons[buttonID].GetComponent<Animator>().Play("correct");
             buttons[buttonID].Done();
             slots[buttonID].SetCorrect(true);
@@ -56,6 +58,7 @@ public class Game1 : Gameplay
         else
         {
             print("incorrect " + id);
+            YaguarLib.Events.Events.OnPlaySoundInChannel(YaguarLib.Audio.AudioManager.types.CLICL_BAD, YaguarLib.Audio.AudioManager.channels.UI);
             buttons[buttonID].GetComponent<Animator>().Play("incorrect");
             //slots[buttonID].SetCorrect(false);
         }
