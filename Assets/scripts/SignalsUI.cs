@@ -42,9 +42,5 @@ public class SignalsUI : MonoBehaviour
         if (OnDone != null)
             OnDone();
     }
-
-    public void PlaySignalSfx() {
-        Debug.Log("#PlaySignalSfx");
-        YaguarLib.Events.Events.OnPlaySoundInChannel(YaguarLib.Audio.AudioManager.types.SIGNAL_ENTRY, YaguarLib.Audio.AudioManager.channels.UI);
-    }
+    
 }
