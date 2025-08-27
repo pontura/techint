@@ -1,8 +1,8 @@
 {
 	"timeForSummary":5,	
-	"time_game_1":30,	
-	"time_game_2":30,	
-	"time_game_3":30,
+	"time_game_1":300,	
+	"time_game_2":300,	
+	"time_game_3":300,
 
 	"slot1":"Moja los terrenos para preparar una superficie compacta y lisa para la construcción de la planta.",
 	"slot2":"Utilizados para tender y posicionar los ductos del gasoducto que exportará el gas producido en la planta.",
@@ -12,21 +12,12 @@
 	"slot6":"Deja el terreno nivelado y compacto, asegurando una base firme y estable para la planta.",
 	"slot7":"Utilizadas para iluminar las zonas de trabajo durante los montajes nocturnos.",	
 	
-<<<<<<< Updated upstream
-	"level_1_lateral_left":"Texto lateral 1",
-	"level_2_lateral_left":"Texto lateral 1",
-	"level_3_lateral_left":"Texto lateral 1",
-	"level_1_lateral_right":"Texto lateral 2",
-	"level_2_lateral_right":"Texto lateral 1",
-	"level_3_lateral_right":"Texto lateral 3",	
-=======
 	"level_1_lateral_izquierdo":"Diseñamos la ingeniería que la industria necesita.",
 	"level_1_lateral_derecho":"Somos la respuesta a la energía del futuro.",
 	"level_2_lateral_izquierdo":"+437 km de ducto en el oleoducto Vaca Muerta Sur.",
 	"level_2_lateral_derecho":"Nuestros tubos sin costura están en los proyectos más importantes de Argentina.",
 	"level_2_lateral_izquierdo":"Transformamos ideas en megaproyectos energéticos.",
 	"level_3_lateral_derecho":"+44% del gas se destina al consumo domestico.",	
->>>>>>> Stashed changes
 	
 	"delay_to_read_gameTitle":6,	
 	"timeOverDuration":2,	
