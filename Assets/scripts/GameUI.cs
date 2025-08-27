@@ -27,6 +27,8 @@ public class GameUI : MonoBehaviour
             SetTutorial(title);
             scoreUI.SetAciveState(levelID);
         }
+        else
+            TutorialDone();
     }
     public void SetTutorial(string title)
     {
