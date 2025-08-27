@@ -12,12 +12,12 @@
 	"slot6":"Deja el terreno nivelado y compacto, asegurando una base firme y estable para la planta.",
 	"slot7":"Utilizadas para iluminar las zonas de trabajo durante los montajes nocturnos.",	
 	
-	"level_1_lateral_izquierdo":"Diseñamos la ingeniería que la industria necesita.",
-	"level_1_lateral_derecho":"Somos la respuesta a la energía del futuro.",
-	"level_2_lateral_izquierdo":"+437 km de ducto en el oleoducto Vaca Muerta Sur.",
-	"level_2_lateral_derecho":"Nuestros tubos sin costura están en los proyectos más importantes de Argentina.",
-	"level_2_lateral_izquierdo":"Transformamos ideas en megaproyectos energéticos.",
-	"level_3_lateral_derecho":"+44% del gas se destina al consumo domestico.",	
+	"level_1_lateral_left":"Diseñamos la ingeniería que la industria necesita.",
+	"level_1_lateral_right":"Somos la respuesta a la energía del futuro.",
+	"level_2_lateral_left":"+437 km de ducto en el oleoducto Vaca Muerta Sur.",
+	"level_2_lateral_right":"Nuestros tubos sin costura están en los proyectos más importantes de Argentina.",
+	"level_3_lateral_left":"Transformamos ideas en megaproyectos energéticos.",
+	"level_3_lateral_right":"+44% del gas se destina al consumo domestico.",	
 	
 	"delay_to_read_gameTitle":6,	
 	"timeOverDuration":2,	
