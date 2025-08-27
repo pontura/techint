@@ -5,6 +5,7 @@ public class GameplayManager : MonoBehaviour
     public Gameplay[] game1;
     public Gameplay[] game2;
     public Gameplay[] game3;
+    public Gameplay[] gameEnd;
 
     public Transform[] containers;
     Gameplay[] games;
@@ -14,11 +15,13 @@ public class GameplayManager : MonoBehaviour
         foreach (Gameplay g in game1) g.SetOn(false);
         foreach (Gameplay g in game2) g.SetOn(false);
         foreach (Gameplay g in game3) g.SetOn(false);
+        foreach (Gameplay g in gameEnd) g.SetOn(false);
 
         // show 
         if (id == 0) games = game1;
         else if (id == 1) games = game2;
         else if (id == 2) games = game3;
+        else if (id == 3) games = gameEnd;
 
         foreach (Gameplay g in games)
             g.SetOn(true);

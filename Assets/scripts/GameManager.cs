@@ -21,6 +21,9 @@ public class GameManager : MonoBehaviour
         game_paused
     }
 
+    public int score_player1;
+    public int score_player2;
+
     static GameManager mInstance = null;
     [SerializeField] UIManager uiManager;
     public QuadUtils quadUtils;
@@ -65,6 +68,8 @@ public class GameManager : MonoBehaviour
     }
     void Init()
     {
+        score_player1 = 0;
+        score_player2 = 0;
         uiManager.Init();
         Intro();
     }
@@ -184,6 +189,13 @@ public class GameManager : MonoBehaviour
     bool winDone;
     public void Win(int player)
     {
+        switch(player)
+        {
+            case 1:
+                score_player1++; break;
+            case 2:
+                score_player2++; break;
+        }
         winDone = false;
         Events.OnWinLevel(player);
 
@@ -248,5 +260,13 @@ public class GameManager : MonoBehaviour
     {
         Intro();
     }
-
+    public void Restart()
+    {
+        Intro();
+    }
+    public int GetWinner()
+    {
+        if(score_player1>score_player2) return score_player1;
+        else return score_player2;
+    }
 }

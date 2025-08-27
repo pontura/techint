@@ -7,7 +7,14 @@ public class SettingsData
     public int time_game_1;
     public int time_game_2;
     public int time_game_3;
+
+
     public string intro_title;
+
+    public string gameEnd_win;
+    public string gameEnd_lose;
+    public int timeForSummary;
+
     public string level_1_title;
     public string level_2_title;
     public string level_3_title;
