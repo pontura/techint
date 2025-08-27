@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 using YaguarLib.UI;
 
@@ -7,7 +8,32 @@ public class TimerUI : MonoBehaviour
     [SerializeField] ProgressBar[] progressBars;
     [SerializeField] float totalTime;
     [SerializeField] float timer = 0;
+    bool isOn;
 
+    private void Awake()
+    {
+        Events.OnWinLevel += OnWinLevel; 
+        Events.OnInitLevel += OnInitLevel;
+        Events.OnInitPlayingLevel += OnInitPlayingLevel;
+    }
+    private void OnDestroy()
+    {
+        Events.OnWinLevel -= OnWinLevel;
+        Events.OnInitLevel -= OnInitLevel;
+        Events.OnInitPlayingLevel -= OnInitPlayingLevel;
+    }
+    void OnInitLevel(int levelID)
+    {
+        Restart();
+    }
+    private void OnWinLevel(int obj)
+    {
+        isOn = false;
+    }
+    void OnInitPlayingLevel()
+    {
+        isOn = true;
+    }
     public void Restart()
     {
         this.totalTime = GameManager.Instance.settings.GetTime(GameManager.Instance.levelId);
@@ -16,6 +42,7 @@ public class TimerUI : MonoBehaviour
     }
     public void OnUpdate()
     {
+        if (!isOn) return;
         timer -= Time.deltaTime;
         if (timer<=0)
         {

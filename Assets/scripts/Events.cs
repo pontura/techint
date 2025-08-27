@@ -10,6 +10,7 @@ public static class Events
     public static System.Action<int> OnWinLevel = delegate { };
     public static System.Action OnExitLevel = delegate { };
     public static System.Action<int> OnInitLevel = delegate { };
+    public static System.Action OnInitPlayingLevel = delegate { };
     public static System.Action TimeOver = delegate { };
     public static System.Action CalibrationDone = delegate { };
     public static System.Action<int> LevelComplete = delegate { };

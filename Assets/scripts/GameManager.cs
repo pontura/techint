@@ -185,6 +185,7 @@ public class GameManager : MonoBehaviour
     public void GameTutorialDone()
     {
         state = states.game;
+        Events.OnInitPlayingLevel();
     }
     bool winDone;
     public void Win(int player)

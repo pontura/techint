@@ -29,7 +29,8 @@ public class Game1 : Gameplay
             a++;
         }
         SetActiveSlot();
-        title.text = GameManager.Instance.settings.level_1_title;
+        if(title != null)
+            title.text = GameManager.Instance.settings.level_1_title;
     }
     void SetActiveSlot()
     {
