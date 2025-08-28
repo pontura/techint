@@ -22,10 +22,15 @@ public class ScoreUI : MonoBehaviour
             player1[levelID ].SetState(LevelSignal.states.win);
             player2[levelID ].SetState(LevelSignal.states.lose);
         }
-        else
+        else if (playerID == 2)
         {
             player1[levelID ].SetState(LevelSignal.states.lose);
             player2[levelID ].SetState(LevelSignal.states.win);
+        }
+        else if (playerID == 2)
+        {
+            player1[levelID].SetState(LevelSignal.states.lose);
+            player2[levelID].SetState(LevelSignal.states.lose);
         }
     }
 

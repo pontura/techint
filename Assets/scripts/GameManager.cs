@@ -1,9 +1,7 @@
 using System.Collections.Generic;
 using System.IO;
-using UnityEditor.PackageManager.UI;
 using UnityEngine;
 using UnityEngine.EventSystems;
-using static UnityEditor.PlayerSettings;
 
 public class GameManager : MonoBehaviour
 {
@@ -17,7 +15,6 @@ public class GameManager : MonoBehaviour
         intro,
         game,
         calibrate,
-        summary,
         game_paused
     }
 
@@ -185,7 +182,6 @@ public class GameManager : MonoBehaviour
     public void GameTutorialDone()
     {
         state = states.game;
-        if(levelId != 3)
         Events.OnInitPlayingLevel();
     }
     bool winDone;
@@ -234,11 +230,6 @@ public class GameManager : MonoBehaviour
         state = states.calibrate;
         uiManager.SetScreen(state);
     }
-    public void Summary()
-    {
-        state = states.summary;
-        uiManager.SetScreen(state);
-    }
     void CalibrationDone()
     {
         print("CalibrationDone");
@@ -250,15 +241,16 @@ public class GameManager : MonoBehaviour
             CalibrationDone();
         else if (state == states.game)
             EndGame();
-        else if (state == states.summary)
-            Intro();
     }
     private void TimeOver()
     {
         string text = settings.timeOver;
         int duration = settings.timeOverDuration;
-        Events.OnSignal(text, duration, NextGame);
-        Summary();
+        Events.OnSignal(text, duration, TimeOverDone);
+    }
+    void TimeOverDone()
+    {
+        Win(0);
     }
     void EndGame()
     {

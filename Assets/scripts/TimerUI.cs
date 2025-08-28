@@ -32,7 +32,8 @@ public class TimerUI : MonoBehaviour
     }
     void OnInitPlayingLevel()
     {
-        isOn = true;
+        if(GameManager.Instance.levelId != 3)
+            isOn = true;
     }
     public void Restart()
     {
