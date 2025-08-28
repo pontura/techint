@@ -203,8 +203,7 @@ public class GameManager : MonoBehaviour
 
         if (player == 0)//empate
         {
-            Events.OnSignalByPlayer(lose, 1, duration, NextGame); 
-            Events.OnSignalByPlayer(lose, 2, duration, NextGame);
+            Events.OnSignalByPlayer(lose, 0, duration, NextGame); 
         }
         else
         {
