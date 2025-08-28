@@ -14,6 +14,8 @@ public class SettingsData
 
     public string gameEnd_win;
     public string gameEnd_lose;
+    public string gameEnd_draw;
+
     public int timeForSummary;
 
     public string level_1_title;

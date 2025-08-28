@@ -201,10 +201,20 @@ public class GameManager : MonoBehaviour
         string lose = GameManager.Instance.settings.lose;
         int duration = GameManager.Instance.settings.winDuration;
 
-        Events.OnSignalByPlayer(win, player, duration, NextGame);
-
-        if (player == 1)   player = 2;  else player = 1;
-        Events.OnSignalByPlayer(lose, player, duration, NextGame);
+        if (player == 0)//empate
+        {
+            Events.OnSignalByPlayer(lose, 1, duration, NextGame); 
+            Events.OnSignalByPlayer(lose, 2, duration, NextGame);
+        }
+        else
+        {
+            Events.OnSignalByPlayer(win, player, duration, NextGame);
+            if (player == 1)
+                player = 2;
+            else if (player == 2)
+                player = 1;
+            Events.OnSignalByPlayer(lose, player, duration, NextGame);
+        }
     }
     public void NextGame()
     {
@@ -264,7 +274,8 @@ public class GameManager : MonoBehaviour
     {
         if(score_player1>score_player2) 
             return 1;
-        else 
+        else if (score_player2 > score_player1)
             return 2;
+        return 0;
     }
 }
