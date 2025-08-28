@@ -9,7 +9,7 @@ public class GameEnd : Gameplay
     {
         int winner = GameManager.Instance.GetWinner();
 
-        if (winner == playerID)
+        if (winner == playerID || playerID == 0)
             GetComponent<Animator>().Play("win");
         else
             GetComponent<Animator>().Play("lose");
