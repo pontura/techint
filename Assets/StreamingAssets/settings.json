@@ -32,6 +32,7 @@
 	
 	"gameEnd_win": "¡Listo! El gas está listo para ser transportado a todos los hogares e industrias del país. Fuiste parte del desarrollo energético más importante del país.",
 	"gameEnd_lose": "¡Oops! Mejor suerte la próxima.",	
+	"gameEnd_draw": "Empataron...",	
 	
 	"level_3_title": "Es hora de construir el ducto.",	
 	"triviaSpeed": 2,	
