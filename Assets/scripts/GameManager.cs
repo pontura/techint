@@ -185,6 +185,7 @@ public class GameManager : MonoBehaviour
     public void GameTutorialDone()
     {
         state = states.game;
+        if(levelId != 3)
         Events.OnInitPlayingLevel();
     }
     bool winDone;

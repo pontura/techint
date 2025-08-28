@@ -5,8 +5,6 @@ using static SettingsData;
 
 public class Game2 : Gameplay
 {
-    int id;
-    Animator anim;
     int triviaID;
     float triviaSpeed;
     [SerializeField] TriviaLine line;
@@ -19,12 +17,13 @@ public class Game2 : Gameplay
     }
     public override void InitGame()
     {
+        print("InitGame 2");
+        ui.SetOff();
         triviaSpeed = GameManager.Instance.settings.triviaSpeed;
-        anim = GetComponent<Animator>(); 
         triviaID = 0;
-        line.SetSpeed(triviaSpeed); 
-        ui.Init(this);
-        OnTrivia();
+        line.SetSpeed(triviaSpeed);
+        line.Reset();
+        //OnTrivia();
     }       
     public void OnTrivia()
     {
@@ -38,7 +37,6 @@ public class Game2 : Gameplay
     }
     public void OnTriviaAnswer(bool isCorrect)
     {
-        print("OnTriviaAnswer " + isCorrect);
         if (isCorrect)
         {
             line.Play();

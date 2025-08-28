@@ -20,10 +20,13 @@ public class TriviaUI : MonoBehaviour
     public void Init(Game2 game)
     {
         this.game = game;
-        gameObject.SetActive(false);
-
+        SetOff();
         buttons[0].Init(0, Add);
         buttons[1].Init(0, Remove);
+    }
+    public void SetOff()
+    {
+        gameObject.SetActive(false);
     }
     public void SetInitialValue()
     {

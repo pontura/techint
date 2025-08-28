@@ -18,6 +18,14 @@ public class TriviaLine : MonoBehaviour
     {
         this.speed = speed;
     }
+    public void Reset()
+    {
+        anim = GetComponent<Animator>();
+        anim.playbackTime = 0;
+        anim.Rebind();
+        anim.Update(0f);
+        Play();
+    }
     public void OnTrivia()
     {
         print("OnTrivia");

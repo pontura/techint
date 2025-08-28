@@ -3048,6 +3048,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: signals
       objectReference: {fileID: 0}
+    - target: {fileID: 3320196920195080473, guid: 9451f826a2494b44a96b2840fd45092a, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4594547356459235446, guid: 9451f826a2494b44a96b2840fd45092a, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
