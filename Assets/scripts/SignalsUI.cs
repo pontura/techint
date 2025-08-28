@@ -28,11 +28,17 @@ public class SignalsUI : MonoBehaviour
         Invoke("OnSignalDone", duration);
     }
     void OnSignalByPlayer(string text, int player, int duration, System.Action OnDone)
-    {        
+    {
+        CancelInvoke();
         this.OnDone = OnDone;
         asset.SetActive(true);
 
-        if(player>0)
+        if(player==0)
+        {
+            signals[0].SetState(text);
+            signals[1].SetState(text);
+        }
+        else 
             signals[player-1].SetState(text);
 
         Invoke("OnSignalDone", duration);

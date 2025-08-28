@@ -18,6 +18,8 @@ public class GameEnd : Gameplay
         {
             if (winner == playerID)
                 t.text = GameManager.Instance.settings.gameEnd_win;
+            else if (winner == 0)
+                t.text = GameManager.Instance.settings.gameEnd_draw;
             else
                 t.text = GameManager.Instance.settings.gameEnd_lose;
         }
