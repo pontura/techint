@@ -25,15 +25,16 @@ public class Pipe : ButtonLidar
             RotationState++;
             RotationState = RotationState % 4;
             Rotate();
-            OnPipeRotate();
+            if (OnPipeRotate != null)
+                OnPipeRotate();
         }
 #else
         YaguarLib.Events.Events.OnPlaySoundInChannel(YaguarLib.Audio.AudioManager.types.CLICK_NEUTRAL, YaguarLib.Audio.AudioManager.channels.UI);
         RotationState++;
         RotationState = RotationState % 4;
         Rotate();
-        if(OnRotate!=null)
-                OnRotate();
+        if(OnPipeRotate!=null)
+                OnPipeRotate();
 #endif
     }
 
