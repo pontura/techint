@@ -11046,6 +11046,7 @@ MonoBehaviour:
   - {fileID: 734591308033849397}
   - {fileID: 5638522939219740}
   - {fileID: 7896226944734694568}
+  isLeft: 0
 --- !u!1 &5656246562887943968
 GameObject:
   m_ObjectHideFlags: 0
@@ -12408,6 +12409,7 @@ MonoBehaviour:
   - {fileID: 6639816194434054658}
   - {fileID: 3589184123228135080}
   - {fileID: 8918565701789619707}
+  isLeft: 0
 --- !u!1 &6314138135393343886
 GameObject:
   m_ObjectHideFlags: 0
