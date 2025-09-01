@@ -28,7 +28,7 @@ public class GameEnd : Gameplay
    
     void Done()
     {
-        GameManager.Instance.Restart();
+        GameManager.Instance.ShowOutro();
     }
 
 }

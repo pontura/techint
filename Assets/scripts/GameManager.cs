@@ -7,6 +7,7 @@ public class GameManager : MonoBehaviour
 {
     [SerializeField] GameUI ui;
     [SerializeField] TMPro.TMP_Text field;
+    [SerializeField] Animator outro;
     InputManager inputManager;
     public states state;
     public int levelId = 0;
@@ -270,5 +271,15 @@ public class GameManager : MonoBehaviour
         else if (score_player2 > score_player1)
             return 2;
         return 0;
+    }
+
+    public void ShowOutro() {
+        outro.gameObject.SetActive(true);
+        Invoke(nameof(CloseOutro), GameManager.Instance.settings.timeForSummary);
+    }
+
+    void CloseOutro() {
+        outro.Play("Exit", 0, 0);
+        GameManager.Instance.Invoke(nameof(GameManager.Instance.Restart),1f);
     }
 }

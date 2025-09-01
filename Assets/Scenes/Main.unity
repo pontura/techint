@@ -1667,6 +1667,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ui: {fileID: 1696610048}
   field: {fileID: 685052350}
+  outro: {fileID: 7336312012714499985}
   state: 0
   levelId: 0
   score_player1: 0
@@ -1687,12 +1688,10 @@ MonoBehaviour:
     level_1_title: 
     level_2_title: 
     level_3_title: 
-    level_1_lateral_left: 
-    level_2_lateral_left: 
-    level_3_lateral_left: 
-    level_1_lateral_right: 
-    level_2_lateral_right: 
-    level_3_lateral_right: 
+    level_1_laterals_win: []
+    level_2_laterals_win: []
+    level_3_laterals_win: []
+    level_3_laterals: []
     timeOver: 
     delay_to_read_gameTitle: 0
     timeOverDuration: 0
@@ -4760,6 +4759,11 @@ GameObject:
 --- !u!224 &7336312012714499984 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 3239241590267456295, guid: e000f22b7a236654baed665a20116fbd, type: 3}
+  m_PrefabInstance: {fileID: 3832012014752165567}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &7336312012714499985 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 8843904320990574438, guid: e000f22b7a236654baed665a20116fbd, type: 3}
   m_PrefabInstance: {fileID: 3832012014752165567}
   m_PrefabAsset: {fileID: 0}
 --- !u!224 &7338417221515491660 stripped
