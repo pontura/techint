@@ -14,8 +14,8 @@
 	"slot6":"Este terreno irregular requiere ser alisado.",
 	"slot7":"Ilumina la zona para trabajar en condiciones seguras.",
 
-	"intro_texts":["¡Bienvenidos!","Tenaris, Tecpetrol y Techint E&C están desarrollando la planta de procesamiento de gas (CPF) en Vaca Muerta.","La realización de un proyecto de esta magnitud requiere de expertos y tecnología avanzada.","¡Ayudanos a ponerla en marcha!"];
-	"level_3_laterals":["texto1","texto2","texto3","texto4","texto5","texto6"],
+	"intro_texts":["¡Bienvenidos!","Tenaris, Tecpetrol y Techint E&C están desarrollando la planta de procesamiento de gas (CPF) en Vaca Muerta.","La realización de un proyecto de esta magnitud requiere de expertos y tecnología avanzada.","¡Ayudanos a ponerla en marcha!"],
+	"level_3_laterals":["Desarrollo de expertise local","Costos operativos optimizados","Calidad y provisión aseguradas","Optimización de stock"],
 
 	"level_1_laterals_win":["80 años de experiencia.","Innovación aplicada en todos nuestros proyectos.","No dejamos ninguna obra sin terminar.","+3500 proyectos concretados a nivel internacional.","Hacemos realidad los proyectos más desafiantes.","Visión global, presencia local","+18.000 colaboradores y colaboradoras en todo el mundo.","+1.9 millones de horas de ingeniería por año.","Para hacer grandes obras, se necesitan grandes equipos.","Hashtag que quede fijo en las pantallas laterales: #SomosTechint y  #PasiónPorHacer"],
 	"level_2_laterals_win":["Donde hay energía, está Tenaris.","En el corazón de Vaca Muerta late nuestra tecnología.","Potencia y precisión en cada detalle.","Somos un motor de crecimiento para la región.","+70 años acompañando al desarrollo energético de nuestro país."],
