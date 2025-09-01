@@ -22,15 +22,13 @@ public class SettingsData
 
     public string level_1_title;
     public string level_2_title;
-    public string level_3_title;
+    public string level_3_title;    
 
-    public string level_1_lateral_left;
-    public string level_2_lateral_left;
-    public string level_3_lateral_left;
+    public string[] level_1_laterals_win;
+    public string[] level_2_laterals_win;
+    public string[] level_3_laterals_win;
 
-    public string level_1_lateral_right;
-    public string level_2_lateral_right;
-    public string level_3_lateral_right;
+    public string[] level_3_laterals;
 
     public string timeOver;
     public int delay_to_read_gameTitle;
@@ -100,14 +98,23 @@ public class SettingsData
         if (_win) return win;
         else return lose;
     }
-    public string GetLateralText(bool isLeft, int levelID)
+    public string[] GetLateralTextWin(int levelID)
     {
         switch (levelID)
         {
-            case 0: return isLeft ? level_1_lateral_left : level_1_lateral_right;
-            case 1: return isLeft ? level_2_lateral_left : level_2_lateral_right;
-            case 2: return isLeft ? level_3_lateral_left : level_3_lateral_right;
+            case 0: return (string[])level_1_laterals_win.Clone();
+            case 1: return (string[])level_2_laterals_win.Clone();
+            case 2: return (string[])level_3_laterals_win.Clone();
         }
-        return "";
+        return null;
+    }
+
+    public string[] GetLateralText(int levelID) {
+        switch (levelID) {
+            case 0: return null;
+            case 1: return null;
+            case 2: return (string[])level_3_laterals.Clone();
+        }
+        return null;
     }
 }

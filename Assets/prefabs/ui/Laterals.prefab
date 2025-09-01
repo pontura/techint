@@ -6602,6 +6602,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2921834598607887914}
+  - component: {fileID: 7087892412528151729}
   m_Layer: 5
   m_Name: Laterals
   m_TagString: Untagged
@@ -6631,6 +6632,73 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &7087892412528151729
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3100831583144425174}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4607cf4e461d214e9d79baf006630b6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gamesIlustrations:
+  - sprites:
+    - {fileID: 21300000, guid: d435bbcf927a5b341a93886cfeecc72a, type: 3}
+    - {fileID: 21300000, guid: e9143d0e564852b4f90c972efea15543, type: 3}
+    - {fileID: 21300000, guid: 7b866536fdaa2e84bbc121faf3348e46, type: 3}
+    ilustrationLeft:
+    - {fileID: 9084353032612607909}
+    - {fileID: 5736867264662667626}
+    ilustrationRight:
+    - {fileID: 3089307693247792359}
+    - {fileID: 669952204614729040}
+    level_ilustrations:
+    - {fileID: 7911934724739410928}
+    - {fileID: 471739655961944088}
+  - sprites:
+    - {fileID: 21300000, guid: 113bebc88147f8a45a1fb98f288301d8, type: 3}
+    - {fileID: 21300000, guid: fa8602e27e5257143bb67d25c949a0e0, type: 3}
+    - {fileID: 21300000, guid: d1e521e49c0c3604783068abe723c5b6, type: 3}
+    - {fileID: 21300000, guid: 9d33dcc12895abe43b540811469d45b9, type: 3}
+    - {fileID: 21300000, guid: 7c444e155562e1f4f9e3919362b3e947, type: 3}
+    ilustrationLeft:
+    - {fileID: 8488364212355408405}
+    - {fileID: 7659025728722606}
+    ilustrationRight:
+    - {fileID: 8079764012187615330}
+    - {fileID: 1275907185903343743}
+    level_ilustrations:
+    - {fileID: 6639816194434054658}
+    - {fileID: 734591308033849397}
+  - sprites:
+    - {fileID: 21300000, guid: 0fba1621f8f4cb94f940b1b3a780ef57, type: 3}
+    - {fileID: 21300000, guid: af975b9c1c9e1f4478dca7bca09bdcf0, type: 3}
+    - {fileID: 21300000, guid: 44543215e82ec704994a8ee3e54ca18a, type: 3}
+    - {fileID: 21300000, guid: 68573077c86c0cc47aeea5b1cc20f9a8, type: 3}
+    - {fileID: 21300000, guid: 37fc7b64696cd1c4384a3574a62615b9, type: 3}
+    - {fileID: 21300000, guid: 048c6ddec7062ac45b447718c81e0187, type: 3}
+    ilustrationLeft:
+    - {fileID: 6163673222990423690}
+    - {fileID: 635413594671966175}
+    ilustrationRight:
+    - {fileID: 642493178068002343}
+    - {fileID: 6325123024404959947}
+    level_ilustrations:
+    - {fileID: 3589184123228135080}
+    - {fileID: 5638522939219740}
+  games:
+  - games:
+    - {fileID: 6586082093604153570}
+    - {fileID: 951199478916117604}
+  - games:
+    - {fileID: 7420555388540567552}
+    - {fileID: 823720813477123774}
+  - games:
+    - {fileID: 1290487612931769160}
+    - {fileID: 2899581296431279609}
 --- !u!1 &3142189571803373314
 GameObject:
   m_ObjectHideFlags: 0

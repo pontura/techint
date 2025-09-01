@@ -38,7 +38,7 @@ public class LateralManager : MonoBehaviour
         Animator anim = games[GameManager.Instance.levelId].GetComponent<Animator>();
         if (anim != null)
             anim.Play("exit");
-        Invoke("OnWinLevelReady", 1);
+        //Invoke("OnWinLevelReady", 1);
     }
     private void OnWinLevelReady()
     {
@@ -46,10 +46,10 @@ public class LateralManager : MonoBehaviour
         GameObject go = gamevers[GameManager.Instance.levelId];
         go.SetActive(true);
 
-        TMPro.TMP_Text field = go.GetComponentInChildren<TMPro.TMP_Text>();
+        /*TMPro.TMP_Text field = go.GetComponentInChildren<TMPro.TMP_Text>();
 
         if(field != null)
-            field.text = GameManager.Instance.settings.GetLateralText(isLeft, GameManager.Instance.levelId);
+            field.text = GameManager.Instance.settings.GetLateralText(isLeft, GameManager.Instance.levelId);*/
     }
     private void Reset()
     {

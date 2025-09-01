@@ -48,14 +48,14 @@ namespace YaguarLib.Xtras
         {
             return (Mathf.Abs(a - b) < diff);
         }
-        public static void Shuffle(AudioClip[] arr)
+        public static void Shuffle<T>(T[] arr)
         {
             if (arr.Length < 2) return;
             for (int a = 0; a < 100; a++)
             {
                 int id = UnityEngine.Random.Range(1, arr.Length);
-                AudioClip value1 = arr[0];
-                AudioClip value2 = arr[id];
+                T value1 = arr[0];
+                T value2 = arr[id];
                 arr[0] = value2;
                 arr[id] = value1;
             }
@@ -290,7 +290,7 @@ namespace YaguarLib.Xtras
                 return hashString.PadLeft(32, '0');
             }
         }
-        public static void Shuffle<T>(List<T> list)
+        public static void ShuffleList<T>(List<T> list)
         {
             System.Random _random = new System.Random();
             int n = list.Count;
@@ -306,7 +306,7 @@ namespace YaguarLib.Xtras
             }
         }
 
-        public static void Shuffle<T>(T[] array)
+        public static void ShuffleArray<T>(T[] array)
         {
             System.Random _random = new System.Random();
             int n = array.Length;
