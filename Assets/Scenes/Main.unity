@@ -3623,6 +3623,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: outro
       objectReference: {fileID: 0}
+    - target: {fileID: 8359487732666047556, guid: e000f22b7a236654baed665a20116fbd, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
