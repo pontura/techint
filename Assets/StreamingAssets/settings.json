@@ -14,7 +14,7 @@
 	"slot6":"Este terreno irregular requiere ser alisado.",
 	"slot7":"Ilumina la zona para trabajar en condiciones seguras.",
 
-	"intro_texts":["¡Bienvenidos!","Tenaris, Tecpetrol y Techint E&C están desarrollando la planta de procesamiento de gas (CPF) en Vaca Muerta.","La realización de un proyecto de esta magnitud requiere de expertos y tecnología avanzada.","¡Ayudanos a ponerla en marcha!"];
+	"intro_texts":["¡Bienvenidos!","Tenaris, Tecpetrol y Techint E&C están desarrollando la planta de procesamiento de gas (CPF) en Vaca Muerta.","La realización de un proyecto de esta magnitud requiere de expertos y tecnología avanzada.","¡Ayudanos a ponerla en marcha!"],
 	"level_3_laterals":["texto1","texto2","texto3","texto4","texto5","texto6"],
 
 	"level_1_laterals_win":["80 años de experiencia.","Innovación aplicada en todos nuestros proyectos.","No dejamos ninguna obra sin terminar.","+3500 proyectos concretados a nivel internacional.","Hacemos realidad los proyectos más desafiantes.","Visión global, presencia local","+18.000 colaboradores y colaboradoras en todo el mundo.","+1.9 millones de horas de ingeniería por año.","Para hacer grandes obras, se necesitan grandes equipos.","Hashtag que quede fijo en las pantallas laterales: #SomosTechint y  #PasiónPorHacer"],
@@ -36,7 +36,6 @@
 	"gameEnd_lose": "¡Oops! Te quedaste sin energía para poner en marcha la planta energética.",	
 	"gameEnd_draw": "Empataron...",	
 	
-	"level_3_title": "Es hora de construir el ducto.",	
 	"triviaSpeed": 2,	
 	"trivias":
 	[

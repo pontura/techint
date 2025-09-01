@@ -3643,6 +3643,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: PhotoOpportunityButton
       objectReference: {fileID: 0}
+    - target: {fileID: 5173199504619493931, guid: bcd7231b7e400ca498f2f00378a1d82c, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7642705764387436355, guid: bcd7231b7e400ca498f2f00378a1d82c, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5

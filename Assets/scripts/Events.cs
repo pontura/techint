@@ -15,4 +15,5 @@ public static class Events
     public static System.Action CalibrationDone = delegate { };
     public static System.Action<int> LevelComplete = delegate { };
     public static System.Action OnPipeRotate = delegate { };
+    public static System.Action<bool> PhotoOpportunityShow = delegate { };
 }
