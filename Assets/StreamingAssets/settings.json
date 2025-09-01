@@ -41,25 +41,25 @@
 	"trivias":
 	[
 		{
-			"trivia": "Alerta: El caudal está bajo.",
+			"trivia": "<color=#f54c53><b><size=140%>ALERTA</size></b></color> <br>El caudal está bajo.",
 			"trivia_valor": 250,
 			"trivia_valor_inicial": 200,
 			"trivia_valor_add": 25
 		},	
 		{	
-			"trivia": "Alerta: La presión está alta.",
+			"trivia": "<color=#f54c53><b><size=140%>ALERTA</size></b></color> <br>La presión está alta.",
 			"trivia_valor": 500,
 			"trivia_valor_inicial": 575,
 			"trivia_valor_add": 25
 		},	
 		{	
-			"trivia": "Alerta: El caudal está demasiado bajo.",
+			"trivia": "<color=#f54c53><b><size=140%>ALERTA</size></b></color> <br>El caudal está demasiado bajo.",
 			"trivia_valor": 250,
 			"trivia_valor_inicial": 150,
 			"trivia_valor_add": 25
 		},	
 		{	
-			"trivia": "Alerta: La presión está demasiado alta.",
+			"trivia": "<color=#f54c53><b><size=140%>ALERTA</size></b></color> <br>La presión está demasiado alta.",
 			"trivia_valor": 500,
 			"trivia_valor_inicial": 625,
 			"trivia_valor_add": 25
