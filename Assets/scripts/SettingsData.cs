@@ -5,10 +5,12 @@ using UnityEngine.Rendering.LookDev;
 [Serializable]
 public class SettingsData
 {
+    public float click_delay_filter;
     public int time_game_1;
     public int time_game_2;
     public int time_game_3;
 
+    public string ip;
 
     public string intro_title;
 

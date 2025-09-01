@@ -1,5 +1,5 @@
 using UnityEngine;
-//using extOSC;
+using extOSC;
 using System.Collections.Generic;
 using System;
 
@@ -7,7 +7,7 @@ public class OSCExampleReceiver : MonoBehaviour
 {
     InputManager inputManager;
     [SerializeField] TMPro.TMP_Text field;
-   // public OSCReceiver receiver;
+    public OSCReceiver receiver;
 
     float filterDuration = 0.25f;
     int offset = 10;
@@ -39,26 +39,26 @@ public class OSCExampleReceiver : MonoBehaviour
             data.Add(new ObjectData());
 
         inputManager = GetComponent<InputManager>();
-     //   print("OSCExampleReceiver");
+        print("OSCExampleReceiver");
 
-        //for (int i = 0; i < 3; i++)
-        //{
-        //    int index = i;
-        //    receiver.Bind("/" + key + (index + 1) + "x", message => OnPosX(data[index], message));
-        //    receiver.Bind("/" + key + (index + 1) + "y", message => OnPosY(data[index], message));
-        //}
+        for (int i = 0; i < 3; i++)
+        {
+            int index = i;
+            receiver.Bind("/x", message => OnPosX(data[index], message));
+            receiver.Bind("/y", message => OnPosY(data[index], message));
+        }
     }
 
-    //void OnPosX(ObjectData d, OSCMessage message)
-    //{
-    //    d.pos.x = (int)message.Values[0].IntValue;
-    //    CheckPos(d);
-    //}
-    //void OnPosY(ObjectData d, OSCMessage message)
-    //{
-    //    d.pos.y = (int)message.Values[0].IntValue;
-    //    CheckPos(d);
-    //}
+    void OnPosX(ObjectData d, OSCMessage message)
+    {
+        d.pos.x = (int)message.Values[0].IntValue;
+        CheckPos(d);
+    }
+    void OnPosY(ObjectData d, OSCMessage message)
+    {
+        d.pos.y = (int)message.Values[0].IntValue;
+        CheckPos(d);
+    }
     public void CheckPos(ObjectData d)
     {
         if (d.pos.x == 0 || d.pos.y == 0) return;

@@ -92,18 +92,9 @@ public class GameManager : MonoBehaviour
     }
     Vector2 NormalizedToScreenPos(Vector2 pos)
     {
-        Vector2 posNormalized = GameManager.Instance.quadUtils.FindUVInQuad(pos);
+        Vector2 posNormalized = GameManager.Instance.quadUtils.NormalizedToWorld(pos);
+       // Vector2 posNormalized = pos;
 
-        posNormalized.x += 1;
-        posNormalized.y += 1;
-
-        posNormalized.x /= 2;
-        posNormalized.y /= 2;
-
-        posNormalized.x *= (Screen.width/3);
-        posNormalized.y *= Screen.height;
-
-        posNormalized.x += Screen.width / 3;
         return posNormalized;
 
     }
@@ -119,7 +110,9 @@ public class GameManager : MonoBehaviour
         //-1 to 1:
         Vector2 pos = NormalizedToScreenPos(_pos);
 
-        if(pos.x<Screen.width/2)
+       // print(pos + " new: " + _pos);
+
+        if (pos.x<Screen.width/2)
             InitDebugClick(1, pos);
         else
             InitDebugClick(2, pos);
@@ -235,6 +228,7 @@ public class GameManager : MonoBehaviour
     }
     public void Calibrate()
     {
+        Cursor.visible = true;
         field.gameObject.SetActive(true);
         state = states.calibrate;
         uiManager.SetScreen(state);
