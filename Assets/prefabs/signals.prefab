@@ -201,6 +201,10 @@ PrefabInstance:
       propertyPath: m_SizeDelta.y
       value: 228.9
       objectReference: {fileID: 0}
+    - target: {fileID: 5831180858123311677, guid: 0e6d6f083711205408352e27582fbd47, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7397516754593268241, guid: 0e6d6f083711205408352e27582fbd47, type: 3}
       propertyPath: m_text
       value: Ganaste!
@@ -264,6 +268,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 2772190688592996310, guid: 0e6d6f083711205408352e27582fbd47, type: 3}
       insertIndex: -1
       addedObject: {fileID: 344476468217291530}
+    - targetCorrespondingSourceObject: {fileID: 5798567527957129147, guid: 0e6d6f083711205408352e27582fbd47, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 8429469612518751796}
   m_SourcePrefab: {fileID: 100100000, guid: 0e6d6f083711205408352e27582fbd47, type: 3}
 --- !u!1 &2091216549593366307 stripped
 GameObject:
@@ -297,6 +304,33 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 1086918482668767114, guid: 0e6d6f083711205408352e27582fbd47, type: 3}
   m_PrefabInstance: {fileID: 4286779100197361909}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &7711592549209276238 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5798567527957129147, guid: 0e6d6f083711205408352e27582fbd47, type: 3}
+  m_PrefabInstance: {fileID: 4286779100197361909}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &8429469612518751796
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7711592549209276238}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 4d6e2a7b37d76e2459d32f96cb158c21, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1001 &7832770861410522035
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -461,6 +495,10 @@ PrefabInstance:
       propertyPath: m_SizeDelta.y
       value: 228.9
       objectReference: {fileID: 0}
+    - target: {fileID: 5831180858123311677, guid: 0e6d6f083711205408352e27582fbd47, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7397516754593268241, guid: 0e6d6f083711205408352e27582fbd47, type: 3}
       propertyPath: m_text
       value: Ganaste!
@@ -520,7 +558,37 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 2772190688592996310, guid: 0e6d6f083711205408352e27582fbd47, type: 3}
       insertIndex: -1
       addedObject: {fileID: 7735775108222236994}
+    - targetCorrespondingSourceObject: {fileID: 5798567527957129147, guid: 0e6d6f083711205408352e27582fbd47, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 8711328801535666771}
   m_SourcePrefab: {fileID: 100100000, guid: 0e6d6f083711205408352e27582fbd47, type: 3}
+--- !u!1 &4380649937408914440 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5798567527957129147, guid: 0e6d6f083711205408352e27582fbd47, type: 3}
+  m_PrefabInstance: {fileID: 7832770861410522035}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &8711328801535666771
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4380649937408914440}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 4d6e2a7b37d76e2459d32f96cb158c21, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &5389501602583065701 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2772190688592996310, guid: 0e6d6f083711205408352e27582fbd47, type: 3}
