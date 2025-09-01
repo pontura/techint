@@ -12,14 +12,13 @@
 	"slot4":"Este ducto requiere soldadura automática.",
 	"slot5":"Usa la grúa para colocar los tanques de almacenamiento y las plantas de tratamiento de gas. ",
 	"slot6":"Este terreno irregular requiere ser alisado.",
-	"slot7":"Ilumina la zona para trabajar en condiciones seguras.",	
-	
-	"level_1_lateral_left":"Diseñamos la ingeniería que la industria necesita.",
-	"level_1_lateral_right":"Somos la respuesta a la energía del futuro.",
-	"level_2_lateral_left":"El <color=#00a551><b><size=120%>16%</size></b></color> del gas que se consume en el país, es producido por Tecpetrol.",
-	"level_2_lateral_right":"Avanzamos hacia el desarrollo de petróleo no convencional con <b>Los Toldos II Este</b>.",
-	"level_3_lateral_left":"<color=#c53d95><b><size=120%>+3500</size></b></color> proyectos concretados a nivel internacional.",
-	"level_3_lateral_right":"<color=#00a551><b><size=120%>+1.9</size></b></color> millones de horas de ingeniería por año.",	
+	"slot7":"Ilumina la zona para trabajar en condiciones seguras.",
+
+	"level_3_laterals":["texto1","texto2","texto3","texto4","texto5","texto6"],
+
+	"level_1_laterals_win":["80 años de experiencia.","Innovación aplicada en todos nuestros proyectos.","No dejamos ninguna obra sin terminar.","+3500 proyectos concretados a nivel internacional.","Hacemos realidad los proyectos más desafiantes.","Visión global, presencia local","+18.000 colaboradores y colaboradoras en todo el mundo.","+1.9 millones de horas de ingeniería por año.","Para hacer grandes obras, se necesitan grandes equipos.","Hashtag que quede fijo en las pantallas laterales: #SomosTechint y  #PasiónPorHacer"],
+	"level_2_laterals_win":["Donde hay energía, está Tenaris.","En el corazón de Vaca Muerta late nuestra tecnología.","Potencia y precisión en cada detalle.","Somos un motor de crecimiento para la región.","+70 años acompañando al desarrollo energético de nuestro país."],
+	"level_3_laterals_win":["El 16% del gas que se consume en el país, es producido por Tecpetrol.","Tecpetrol es líder en gas no convencional.","Este invierno, Fortín de Piedra mantuvo un nivel de producción de 24,4 metros cúbicos de gas por día.","Avanzamos hacia el desarrollo de petróleo no convencional con Los Toldos II Este."],
 	
 	"delay_to_read_gameTitle":6,	
 	"timeOverDuration":2,	
