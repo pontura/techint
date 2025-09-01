@@ -12,8 +12,15 @@ public class InputManager : MonoBehaviour
     }
     void Update()
     {
-        //if (Input.GetMouseButtonDown(0))
-        //    OnHit(Input.mousePosition);
+#if UNITY_EDITOR
+        if (Input.GetMouseButtonDown(0))
+        {
+            Vector2 pos = Input.mousePosition;
+            pos.x /= (float)Screen.width;
+            pos.y /= (float)Screen.height;
+            OnHit(pos);
+        }
+#endif
         if (Input.GetKeyDown(KeyCode.Escape))
             gameManager.Esc();
         if (Input.GetKeyDown(KeyCode.F1))

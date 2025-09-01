@@ -92,8 +92,8 @@ public class GameManager : MonoBehaviour
     }
     Vector2 NormalizedToScreenPos(Vector2 pos)
     {
-        // Vector2 posNormalized = GameManager.Instance.quadUtils.FindUVInQuad(pos);
-        Vector2 posNormalized = pos;
+        Vector2 posNormalized = GameManager.Instance.quadUtils.NormalizedToWorld(pos);
+       // Vector2 posNormalized = pos;
 
         return posNormalized;
 
@@ -105,13 +105,14 @@ public class GameManager : MonoBehaviour
         else
             debugClick2.Init(_pos);
     }
-    public void OnHit(Vector2 pos)
+    public void OnHit(Vector2 _pos)
     {
         //-1 to 1:
-        print(pos);
-        //Vector2 pos = NormalizedToScreenPos(_pos);
+        Vector2 pos = NormalizedToScreenPos(_pos);
 
-        if(pos.x<Screen.width/2)
+        print(pos + " new: " + _pos);
+
+        if (pos.x<Screen.width/2)
             InitDebugClick(1, pos);
         else
             InitDebugClick(2, pos);

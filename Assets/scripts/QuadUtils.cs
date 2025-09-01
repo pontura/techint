@@ -3,6 +3,32 @@ using UnityEngine;
 
 public class QuadUtils :MonoBehaviour
 {
+    [SerializeField] RectTransform targetRect; // El objeto UI donde querés mapear
+
+    // Convierte (0..1, 0..1) a posición local dentro del rectángulo
+    public Vector2 NormalizedToLocal(Vector2 normalizedPos)
+    {
+        // Tamaño del rect
+        Vector2 size = targetRect.rect.size;
+
+        // Pasamos de normalizado a pixel relativo al rect
+        Vector2 localPos = new Vector2(
+            (normalizedPos.x - 0.5f) * size.x,
+            (normalizedPos.y - 0.5f) * size.y
+        );
+
+        return localPos;
+    }
+
+    // Convierte a posición global en la UI (para ponerlo en otro objeto, por ejemplo)
+    public Vector2 NormalizedToWorld(Vector2 normalizedPos)
+    {
+        return targetRect.TransformPoint(NormalizedToLocal(normalizedPos));
+    }
+
+
+
+
 
     public Vector2 debug;
     // q0 = top-right, q1 = top-left, q2 = bottom-left, q3 = bottom-right
