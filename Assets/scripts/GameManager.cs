@@ -110,7 +110,7 @@ public class GameManager : MonoBehaviour
         //-1 to 1:
         Vector2 pos = NormalizedToScreenPos(_pos);
 
-        print(pos + " new: " + _pos);
+       // print(pos + " new: " + _pos);
 
         if (pos.x<Screen.width/2)
             InitDebugClick(1, pos);

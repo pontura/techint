@@ -5,6 +5,7 @@ public class OSCLogger : MonoBehaviour
 {
     public OSCReceiver Receiver;
     public Vector2 pos;
+    public Vector2 lastPos;
     [SerializeField] InputManager inputManager;
 
     void Start()
@@ -24,11 +25,13 @@ public class OSCLogger : MonoBehaviour
         if (pos.x == 0 || pos.y == 0)
             return;
 
+        if (lastPos == pos) return;
+        lastPos = pos;
 
-        float _x = (Screen.width/3) * pos.x;
-        _x += Screen.width/3;
-        float _y = Screen.height * pos.y;
-        inputManager.OnHit(new Vector2(_x, _y));
+        //float _x = (Screen.width/3) * pos.x;
+        //_x += Screen.width/3;
+        //float _y = Screen.height * pos.y;
+        inputManager.OnHit(new Vector2(pos.x, pos.y));
 
         pos = Vector2.zero; 
     }
@@ -36,6 +39,7 @@ public class OSCLogger : MonoBehaviour
     {
         Debug.Log("📡 OSC recibido en: " + message.Address);
         pos.x = message.Values[0].FloatValue;
+
         CheckSend();
     }
     private void SetY(OSCMessage message)
