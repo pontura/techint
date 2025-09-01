@@ -29,44 +29,44 @@ public class QuadUtils :MonoBehaviour
 
 
     // Inversa: busca uv que produce targetPos en el cuadrilátero
-    public Vector2 FindUVInQuad(Vector2 targetPos, int maxIterations = 10, float tolerance = 0.0001f)
-    {
-       // print("FindUVInQuad " + targetPos);
-        Vector2 uv = Vector2.zero; // comienza en el centro (0,0)
+    //public Vector2 FindUVInQuad(Vector2 targetPos, int maxIterations = 10, float tolerance = 0.0001f)
+    //{
+    //   // print("FindUVInQuad " + targetPos);
+    //    Vector2 uv = Vector2.zero; // comienza en el centro (0,0)
 
-        for (int i = 0; i < maxIterations; i++)
-        {
-            Vector2 guess = BilinearInterpolate(uv);
-            Vector2 error = targetPos - guess;
+    //    for (int i = 0; i < maxIterations; i++)
+    //    {
+    //        Vector2 guess = BilinearInterpolate(uv);
+    //        Vector2 error = targetPos - guess;
 
-            if (error.magnitude < tolerance)
-                break;
+    //        if (error.magnitude < tolerance)
+    //            break;
 
-            // Derivadas finitas: estimamos cómo cambia el punto cuando cambiamos u o v
-            float delta = 0.001f;
+    //        // Derivadas finitas: estimamos cómo cambia el punto cuando cambiamos u o v
+    //        float delta = 0.001f;
 
-            Vector2 du = (BilinearInterpolate(uv + new Vector2(delta, 0)) - guess) / delta;
-            Vector2 dv = (BilinearInterpolate(uv + new Vector2(0, delta)) - guess) / delta;
+    //        Vector2 du = (BilinearInterpolate(uv + new Vector2(delta, 0)) - guess) / delta;
+    //        Vector2 dv = (BilinearInterpolate(uv + new Vector2(0, delta)) - guess) / delta;
 
-            // Matriz jacobiana aproximada
-            Matrix2x2 J = new Matrix2x2(du.x, dv.x, du.y, dv.y);
+    //        // Matriz jacobiana aproximada
+    //        Matrix2x2 J = new Matrix2x2(du.x, dv.x, du.y, dv.y);
 
-            // Invertimos la jacobiana y corregimos uv
-            if (J.Invert(out Matrix2x2 invJ))
-            {
-                Vector2 deltaUV = invJ * error;
-                uv += deltaUV;
-            }
-            else
-            {
-                print("no se pudo invertir");
-                break; // no se pudo invertir
-            }
-        }
-        //print("FindUVInQuad debug" + debug);
-        debug = uv;
-        return uv;
-    }
+    //        // Invertimos la jacobiana y corregimos uv
+    //        if (J.Invert(out Matrix2x2 invJ))
+    //        {
+    //            Vector2 deltaUV = invJ * error;
+    //            uv += deltaUV;
+    //        }
+    //        else
+    //        {
+    //            print("no se pudo invertir");
+    //            break; // no se pudo invertir
+    //        }
+    //    }
+    //    //print("FindUVInQuad debug" + debug);
+    //    debug = uv;
+    //    return uv;
+    //}
 
     // Pequeña clase para manejar matrices 2x2 e invertirlas
     private struct Matrix2x2

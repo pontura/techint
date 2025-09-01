@@ -10,6 +10,8 @@ public class SettingsData
     public int time_game_3;
 
 
+    public string ip;
+
     public string intro_title;
 
     public string gameEnd_win;
