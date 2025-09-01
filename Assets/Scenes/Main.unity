@@ -776,7 +776,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: asdasdasd
+  m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -1207,7 +1207,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &966855229
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1226,7 +1226,7 @@ MonoBehaviour:
   _workInEditor: 0
   _localHostMode: 0
   _localHost: 192.168.1.21
-  _localPort: 7001
+  _localPort: 9000
 --- !u!4 &966855230
 Transform:
   m_ObjectHideFlags: 0
@@ -1348,6 +1348,7 @@ GameObject:
   - component: {fileID: 1109424218}
   - component: {fileID: 1109424220}
   - component: {fileID: 1109424219}
+  - component: {fileID: 1109424222}
   m_Layer: 5
   m_Name: GameManager
   m_TagString: Untagged
@@ -1516,6 +1517,7 @@ MonoBehaviour:
   uiManager: {fileID: 1109424218}
   quadUtils: {fileID: 1109424219}
   settings:
+    click_delay_filter: 0
     time_game_1: 0
     time_game_2: 0
     time_game_3: 0
@@ -1551,6 +1553,22 @@ MonoBehaviour:
     trivias: []
   debugClick1: {fileID: 932348446}
   debugClick2: {fileID: 1457652440}
+--- !u!114 &1109424222
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1109424212}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6ae51c3ade9a5e848890640a5dc7f11c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Receiver: {fileID: 966855229}
+  pos: {x: 0, y: 0}
+  lastPos: {x: 0, y: 0}
+  inputManager: {fileID: 1109424220}
 --- !u!1 &1226269992
 GameObject:
   m_ObjectHideFlags: 0
