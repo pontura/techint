@@ -5454,9 +5454,9 @@ RectTransform:
   - {fileID: 1084256231681763363}
   - {fileID: 3037777936904635447}
   - {fileID: 9130251025151807824}
-  - {fileID: 1287688198694805000}
   - {fileID: 366723617915664764}
   - {fileID: 2648767429707894653}
+  - {fileID: 1287688198694805000}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
@@ -5479,7 +5479,6 @@ MonoBehaviour:
   playerID: 1
   items: 
   slotContainer: {fileID: 7026810390844875589}
-  title: {fileID: 0}
   slots:
   - {fileID: 7174034850338096482}
   - {fileID: 2453734711644191994}

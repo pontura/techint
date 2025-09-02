@@ -1698,7 +1698,7 @@ MonoBehaviour:
     delay_to_read_gameTitle: 0
     timeOverDuration: 0
     winDuration: 0
-    winSignalsDuration: 0
+    winSignalsDelay: 0
     win: []
     lose: []
     slot1: 
@@ -3753,17 +3753,9 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1109424216}
     m_Modifications:
-    - target: {fileID: 4682912517435337524, guid: bcd7231b7e400ca498f2f00378a1d82c, type: 3}
-      propertyPath: m_SizeDelta.x
-      value: 70.57
-      objectReference: {fileID: 0}
     - target: {fileID: 5173199504619493931, guid: bcd7231b7e400ca498f2f00378a1d82c, type: 3}
       propertyPath: m_Name
       value: PhotoOpportunityButton
-      objectReference: {fileID: 0}
-    - target: {fileID: 5173199504619493931, guid: bcd7231b7e400ca498f2f00378a1d82c, type: 3}
-      propertyPath: m_IsActive
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7642705764387436355, guid: bcd7231b7e400ca498f2f00378a1d82c, type: 3}
       propertyPath: m_Pivot.x
