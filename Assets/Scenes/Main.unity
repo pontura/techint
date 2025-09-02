@@ -1687,9 +1687,9 @@ MonoBehaviour:
     gameEnd_draw: 
     timeForSummary: 0
     intro_texts: []
-    level_1_title: 
-    level_2_title: 
-    level_3_title: 
+    level_1_title: []
+    level_2_title: []
+    level_3_title: []
     level_1_laterals_win: []
     level_2_laterals_win: []
     level_3_laterals_win: []
@@ -1698,8 +1698,9 @@ MonoBehaviour:
     delay_to_read_gameTitle: 0
     timeOverDuration: 0
     winDuration: 0
-    win: 
-    lose: 
+    winSignalsDuration: 0
+    win: []
+    lose: []
     slot1: 
     slot2: 
     slot3: 
@@ -3752,6 +3753,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1109424216}
     m_Modifications:
+    - target: {fileID: 4682912517435337524, guid: bcd7231b7e400ca498f2f00378a1d82c, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 70.57
+      objectReference: {fileID: 0}
     - target: {fileID: 5173199504619493931, guid: bcd7231b7e400ca498f2f00378a1d82c, type: 3}
       propertyPath: m_Name
       value: PhotoOpportunityButton
@@ -3786,11 +3791,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7642705764387436355, guid: bcd7231b7e400ca498f2f00378a1d82c, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 840.08
+      value: 205.1
       objectReference: {fileID: 0}
     - target: {fileID: 7642705764387436355, guid: bcd7231b7e400ca498f2f00378a1d82c, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 172.18
+      value: 146
       objectReference: {fileID: 0}
     - target: {fileID: 7642705764387436355, guid: bcd7231b7e400ca498f2f00378a1d82c, type: 3}
       propertyPath: m_LocalPosition.x
@@ -3826,7 +3831,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7642705764387436355, guid: bcd7231b7e400ca498f2f00378a1d82c, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 0
+      value: 576
       objectReference: {fileID: 0}
     - target: {fileID: 7642705764387436355, guid: bcd7231b7e400ca498f2f00378a1d82c, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
