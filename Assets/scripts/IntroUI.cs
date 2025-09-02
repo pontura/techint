@@ -17,8 +17,9 @@ public class IntroUI : ButtonLidar
             title.text = GameManager.Instance.settings.intro_texts[_index];
             _index++;
         } else {
-            GameManager.Instance.InitGame();
-            _index = 0;
+            GameManager.Instance.InitGame();            
+            title.text = GameManager.Instance.settings.intro_texts[0];
+            _index = 1;
         }
 
     }
