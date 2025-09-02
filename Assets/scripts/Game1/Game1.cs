@@ -6,7 +6,6 @@ public class Game1 : Gameplay
     public List<int> items;
     int id;
     public Transform slotContainer;
-    public TMPro.TMP_Text title;
     public List<Slot> slots;
     public List<SimpleButton> buttons;
 
@@ -29,8 +28,6 @@ public class Game1 : Gameplay
             a++;
         }
         SetActiveSlot();
-        if(title != null)
-            title.text = GameManager.Instance.settings.level_1_title;
     }
     void SetActiveSlot()
     {

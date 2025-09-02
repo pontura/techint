@@ -11,11 +11,13 @@ public class SignalsUI : MonoBehaviour
         print("Awake" + gameObject.name);
         Events.OnSignal += OnSignal;
         Events.OnSignalByPlayer += OnSignalByPlayer;
+        Events.OnSignalRefresh += OnSignalRefresh;
     }
     private void OnDestroy()
     {
         Events.OnSignal -= OnSignal;
         Events.OnSignalByPlayer -= OnSignalByPlayer;
+        Events.OnSignalRefresh -= OnSignalRefresh;
     }
     void OnSignal(string text, int duration, System.Action OnDone)
     {
@@ -24,6 +26,17 @@ public class SignalsUI : MonoBehaviour
 
         foreach (SignalUI signal in signals)
             signal.SetState(text);
+
+        Invoke("OnSignalDone", duration);
+    }
+
+    void OnSignalRefresh(string text, int duration, System.Action OnDone) {
+        CancelInvoke();
+        this.OnDone = OnDone;
+        asset.SetActive(true);
+
+        foreach (SignalUI signal in signals)
+            signal.RefreshState(text);
 
         Invoke("OnSignalDone", duration);
     }

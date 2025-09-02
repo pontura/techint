@@ -20,20 +20,34 @@ public class GameUI : MonoBehaviour
     }
     public void SetGamePlay(int levelID)
     {
-        gameplayManager.Init(levelID);
-        string title = GameManager.Instance.settings.GetTitle(levelID);
-        if (title != "")
+        gameplayManager.Init(levelID);        
+        if (levelID<3)
         {
-            SetTutorial(title);
+            SetTutorial(levelID);
             scoreUI.SetAciveState(levelID);
         }
         else
             TutorialDone();
     }
-    public void SetTutorial(string title)
+    int titleIndex;
+    public void SetTutorial(int levelID, bool isRefresh=false)
     {
+        string[] title = GameManager.Instance.settings.GetTitle(levelID);
         int delay_to_read_gameTitle = GameManager.Instance.settings.delay_to_read_gameTitle;
-        Events.OnSignal(title, delay_to_read_gameTitle, TutorialDone);
+        Debug.Log("SetTutorial: " + levelID + " " + titleIndex);
+        System.Action doNext = titleIndex < title.Length-1 ?
+            () => {
+                titleIndex++;
+                SetTutorial(levelID,true);
+            } :
+            () => {
+                titleIndex = 0;
+                TutorialDone();
+            };
+        if(isRefresh)
+            Events.OnSignalRefresh(title[titleIndex], delay_to_read_gameTitle, doNext);
+        else
+            Events.OnSignal(title[titleIndex], delay_to_read_gameTitle, doNext);
     }
     public void TutorialDone()
     {

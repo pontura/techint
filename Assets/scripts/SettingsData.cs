@@ -22,9 +22,9 @@ public class SettingsData
 
     public string[] intro_texts;
 
-    public string level_1_title;
-    public string level_2_title;
-    public string level_3_title;    
+    public string[] level_1_title;
+    public string[] level_2_title;
+    public string[] level_3_title;    
 
     public string[] level_1_laterals_win;
     public string[] level_2_laterals_win;
@@ -86,7 +86,7 @@ public class SettingsData
             default: return time_game_3;
         }
     }
-    public string GetTitle(int levelID)
+    public string[] GetTitle(int levelID)
     {
         switch (levelID)
         {
@@ -94,7 +94,7 @@ public class SettingsData
             case 1: return level_2_title;
             case 2: return level_3_title;
         }
-        return "";
+        return null;
     }
     public string GetResult(bool _win)
     {

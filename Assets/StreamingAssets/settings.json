@@ -29,9 +29,9 @@
 	"lose": [":(","¡Ups!","¡Ouch!"],
 	"timeOver": "¡Tiempo!",
 	"intro_title": "¡Bienvenidos!",
-	"level_1_title": "El plano de la CPF en Vaca Muerta ya fue diseñado por los ingenieros e ingenieras de Techint E&C.¡Ahora es tu turno de construirla de forma eficiente para poder producir energía!",
-	"level_2_title": "¡La planta ya está construida! Ahora Tecpetrol tiene que extraer el gas para poder procesarlo. ¡Ayudanos en la correcta perforación!",	
-	"level_3_title": "Ahora conecta los tubos Tenaris para transportar los hidrocarburos de Vaca Muerta.",
+	"level_1_title": ["Los ingenieros e ingenieras de Techint E&C diseñaron el plano de la CPF en Vaca Muerta con mucha precisión.","Ahora es tu turno de construirla de forma eficiente para poder producir energía."],
+	"level_2_title": ["La planta ya está construída. Ahora Tecpetrol…","Ayudanos en la correcta perforación!"],
+	"level_3_title": ["Ahora conecta los tubos Tenaris para transportar los hidrocarburos de Vaca Muerta."],
 	
 	"gameEnd_win": "Excelente trabajo ¡Fuiste parte del desarrollo energético más importante del país!",
 	"gameEnd_lose": "¡Oops! Te quedaste sin energía para poner en marcha la planta energética.",	
