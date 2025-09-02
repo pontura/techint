@@ -193,22 +193,23 @@ public class GameManager : MonoBehaviour
 
         string win = GameManager.Instance.settings.win[GameManager.Instance.levelId];
         string lose = GameManager.Instance.settings.lose[GameManager.Instance.levelId];
-        int duration = GameManager.Instance.settings.winSignalsDuration;
+        int duration = GameManager.Instance.settings.winDuration;
 
         if (player == 0)//empate
         {
-            Events.OnSignalByPlayer(lose, 0, duration, NextGame); 
+            Events.OnSignalByPlayer(lose, 0, duration, ()=>Invoke(nameof(NextGame), GameManager.Instance.settings.winSignalsDelay)); 
         }
         else
         {
-            Events.OnSignalByPlayer(win, player, duration, NextGame);
+            Events.OnSignalByPlayer(win, player, duration, () => Invoke(nameof(NextGame), GameManager.Instance.settings.winSignalsDelay));
             if (player == 1)
                 player = 2;
             else if (player == 2)
                 player = 1;
-            Events.OnSignalByPlayer(lose, player, duration, NextGame);
+            Events.OnSignalByPlayer(lose, player, duration, () => Invoke(nameof(NextGame), GameManager.Instance.settings.winSignalsDelay));
         }
     }
+
     public void NextGame()
     {
         print("NextGame " + winDone);

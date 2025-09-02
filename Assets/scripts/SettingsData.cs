@@ -37,7 +37,7 @@ public class SettingsData
     public int timeOverDuration;
 
     public int winDuration;
-    public int winSignalsDuration;
+    public int winSignalsDelay;
     public string[] win;
     public string[] lose;
 

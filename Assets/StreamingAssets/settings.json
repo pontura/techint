@@ -24,7 +24,7 @@
 	"delay_to_read_gameTitle":6,	
 	"timeOverDuration":2,	
 	"winDuration":6,
-	"winSignalsDuration":4,
+	"winSignalsDelay":2,
 	"win": ["¡Buen trabajo! Construiste la planta de procesamiento de gas.","¡Buen trabajo! Mantuviste los parámetros óptimos de perforación.","¡Buen trabajo! ¡Conectaste todos los tubos en tiempo récord!"],
 	"lose": [":(","¡Ups!","¡Ouch!"],
 	"timeOver": "¡Tiempo!",
