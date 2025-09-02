@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.Video;
 
-public class PhotoOpportunity : MonoBehaviour
+public class PhotoOpportunity : ButtonLidar
 {
     [SerializeField] VideoPlayer video;
     [SerializeField] Animator anim;
@@ -20,6 +20,7 @@ public class PhotoOpportunity : MonoBehaviour
     }
 
     public void Show(bool enable) {
+        Debug.Log("#Show: " + enable);
         gameObject.SetActive(enable);
         string animName = enable ? "Entry" : "Exit";
         anim.Play(animName, 0, 0);
@@ -30,5 +31,9 @@ public class PhotoOpportunity : MonoBehaviour
             YaguarLib.Events.Events.StopChannel(YaguarLib.Audio.AudioManager.channels.MUSIC);
             video.Stop();
         }
+    }
+
+    public override void OnClicked() {
+        Show(false);
     }
 }

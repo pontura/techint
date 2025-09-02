@@ -398,6 +398,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   title: {fileID: 7473554205997241772}
   field: {fileID: 0}
+  textAnim: {fileID: 2092108920448923673}
 --- !u!111 &3164192949090539139
 Animation:
   m_ObjectHideFlags: 0

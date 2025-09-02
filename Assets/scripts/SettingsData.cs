@@ -20,6 +20,8 @@ public class SettingsData
 
     public int timeForSummary;
 
+    public string[] intro_texts;
+
     public string level_1_title;
     public string level_2_title;
     public string level_3_title;    
