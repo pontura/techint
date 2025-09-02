@@ -191,9 +191,9 @@ public class GameManager : MonoBehaviour
         winDone = false;
         Events.OnWinLevel(player);
 
-        string win = GameManager.Instance.settings.win;
-        string lose = GameManager.Instance.settings.lose;
-        int duration = GameManager.Instance.settings.winDuration;
+        string win = GameManager.Instance.settings.win[GameManager.Instance.levelId];
+        string lose = GameManager.Instance.settings.lose[GameManager.Instance.levelId];
+        int duration = GameManager.Instance.settings.winSignalsDuration;
 
         if (player == 0)//empate
         {

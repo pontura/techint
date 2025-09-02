@@ -37,8 +37,9 @@ public class SettingsData
     public int timeOverDuration;
 
     public int winDuration;
-    public string win;
-    public string lose;
+    public int winSignalsDuration;
+    public string[] win;
+    public string[] lose;
 
     public string slot1;
     public string slot2; 
@@ -97,8 +98,8 @@ public class SettingsData
     }
     public string GetResult(bool _win)
     {
-        if (_win) return win;
-        else return lose;
+        if (_win) return win[GameManager.Instance.levelId];
+        else return lose[GameManager.Instance.levelId];
     }
     public string[] GetLateralTextWin(int levelID)
     {

@@ -23,9 +23,10 @@
 	
 	"delay_to_read_gameTitle":6,	
 	"timeOverDuration":2,	
-	"winDuration":6,	
-	"win": "¡Buen trabajo!",
-	"lose": ":(",
+	"winDuration":6,
+	"winSignalsDuration":4,
+	"win": ["¡Buen trabajo! Construiste la planta de procesamiento de gas.","¡Buen trabajo! Mantuviste los parámetros óptimos de perforación.","¡Buen trabajo! ¡Conectaste todos los tubos en tiempo récord!"],
+	"lose": [":(","¡Ups!","¡Ouch!"],
 	"timeOver": "¡Tiempo!",
 	"intro_title": "¡Bienvenidos!",
 	"level_1_title": "El plano de la CPF en Vaca Muerta ya fue diseñado por los ingenieros e ingenieras de Techint E&C.¡Ahora es tu turno de construirla de forma eficiente para poder producir energía!",
