@@ -24,6 +24,7 @@ namespace YaguarLib.Audio
             GAME_ENTRY,
             SIGNAL_ENTRY,
             GAME_WIN,
+            OPPORTUNITY,
             NONE
         }
        
@@ -167,7 +168,7 @@ namespace YaguarLib.Audio
             if (ad == null) return;
             PlaySound(ad.clip, channel);
         }
-        AudioData GetAudio(types t)
+        public AudioData GetAudio(types t)
         {
             foreach (AudioData ad in audios)
                 if (t == ad.TYPE) return ad;

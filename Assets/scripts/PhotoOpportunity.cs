@@ -23,9 +23,12 @@ public class PhotoOpportunity : MonoBehaviour
         gameObject.SetActive(enable);
         string animName = enable ? "Entry" : "Exit";
         anim.Play(animName, 0, 0);
-        if (enable)
+        if (enable) {
+            YaguarLib.Audio.AudioManager.Instance.PlaySound(YaguarLib.Audio.AudioManager.Instance.GetAudio(YaguarLib.Audio.AudioManager.types.OPPORTUNITY).clip, channel: YaguarLib.Audio.AudioManager.channels.MUSIC, loop: true);
             video.Play();
-        else
+        } else {
+            YaguarLib.Events.Events.StopChannel(YaguarLib.Audio.AudioManager.channels.MUSIC);
             video.Stop();
+        }
     }
 }
