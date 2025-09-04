@@ -11,6 +11,8 @@ public class InputManager : MonoBehaviour
     float p1_timer_click;
     float p2_timer_click;
 
+    float lastClickTime;
+
     void Start()
     {
         gameManager = GetComponent<GameManager>();
@@ -39,7 +41,10 @@ public class InputManager : MonoBehaviour
 
     public void OnHit(Vector2 pos)
     {
-        if(pos.x<0.5f)
+        lastClickTime = Time.realtimeSinceStartup;
+        CancelInvoke();
+        Invoke(nameof(IsInactive), GameManager.Instance.settings.inactive_thresh);
+        if (pos.x<0.5f)
         {
             if (p1_timer_click != 0 && (p1_timer_click + GameManager.Instance.settings.click_delay_filter > Time.time)) 
             {
@@ -59,5 +64,9 @@ public class InputManager : MonoBehaviour
         }
         this.pos1 = pos;
         gameManager.OnHit(pos);
+    }
+
+    void IsInactive() {
+        GameManager.Instance.GameIsInactive();
     }
 }

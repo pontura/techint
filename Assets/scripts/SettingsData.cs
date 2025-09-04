@@ -11,6 +11,7 @@ public class SettingsData
     public int time_game_3;
 
     public string ip;
+    public float inactive_thresh;
 
     public string intro_title;
 

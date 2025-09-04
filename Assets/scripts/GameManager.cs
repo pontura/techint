@@ -274,17 +274,22 @@ public class GameManager : MonoBehaviour
         return 0;
     }
 
+    public void GameIsInactive() {
+        Events.PhotoOpportunityShow(true);
+    }
+
     public void ShowOutro() {
         CancelInvoke();
         outro.gameObject.SetActive(true);
         outro.Play("Entry", 0, 0);
-        Invoke(nameof(CloseOutro), GameManager.Instance.settings.timeForSummary);
+        Invoke(nameof(CloseOutro), settings.timeForSummary);
     }
 
     void CloseOutro()
     {
         CancelInvoke();
         outro.Play("Exit", 0, 0);
-        GameManager.Instance.Invoke(nameof(GameManager.Instance.Restart),1f);
+        GameIsInactive();
+        //GameManager.Instance.Invoke(nameof(GameIsInactive),1f);
     }
 }

@@ -34,6 +34,7 @@ public class PhotoOpportunity : ButtonLidar
     }
 
     public override void OnClicked() {
+        GameManager.Instance.Restart();
         Show(false);
     }
 }
