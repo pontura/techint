@@ -5,6 +5,7 @@ public class LateralManager : MonoBehaviour
 {
     public int playerID;
     public GameObject[] games;
+    public GameObject[] gameIntros;
     public GameObject[] gamevers;
 
     [SerializeField] bool isLeft;
@@ -14,18 +15,25 @@ public class LateralManager : MonoBehaviour
         Events.OnWinLevel += OnWinLevel;
         Events.OnInitLevel += OnInitLevel;
         Events.OnExitLevel += OnExitLevel;
+        Events.OnInitPlayingLevel += OnInitPlayingLevel;
     }
     void OnDestroy()
     {
         Events.OnWinLevel = OnWinLevel;
         Events.OnInitLevel -= OnInitLevel;
         Events.OnExitLevel -= OnExitLevel;
+        Events.OnInitPlayingLevel -= OnInitPlayingLevel;
     }
     private void OnInitLevel(int levelID)
     {
         Reset();
         foreach (GameObject go in games) go.SetActive(false);
-        games[levelID].SetActive(true);
+        gameIntros[levelID].SetActive(true);
+    }
+    private void OnInitPlayingLevel() {
+        Reset();
+        foreach (GameObject go in games) go.SetActive(false);
+        games[GameManager.Instance.levelId].SetActive(true);
     }
     private void OnExitLevel()
     {
@@ -54,6 +62,7 @@ public class LateralManager : MonoBehaviour
     private void Reset()
     {
         foreach (GameObject go in games) go.SetActive(false);
+        foreach (GameObject go in gameIntros) go.SetActive(false);
         foreach (GameObject go in gamevers) go.SetActive(false);
     }
 }
