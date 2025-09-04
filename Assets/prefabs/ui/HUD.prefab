@@ -750,7 +750,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 4.2, y: -0.6}
+  m_AnchoredPosition: {x: 4.2, y: 4}
   m_SizeDelta: {x: 86.7, y: 40.9}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &8688869215335853495
@@ -1902,7 +1902,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1189405638015613637
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2145,7 +2145,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 4.2, y: -0.5999999}
+  m_AnchoredPosition: {x: 4.2, y: 3.9999757}
   m_SizeDelta: {x: 86.7, y: 40.9}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &7216207339051630121
@@ -2339,7 +2339,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &3361704272700603374
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3233,6 +3233,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 4010115606292124546, guid: e67e7154419eecb4ab1f162d41d2c8e7, type: 3}
       insertIndex: -1
       addedObject: {fileID: 6979801825605942611}
+    - targetCorrespondingSourceObject: {fileID: 4010115606292124546, guid: e67e7154419eecb4ab1f162d41d2c8e7, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 6810223685173868243}
   m_SourcePrefab: {fileID: 100100000, guid: e67e7154419eecb4ab1f162d41d2c8e7, type: 3}
 --- !u!114 &284321387986046226 stripped
 MonoBehaviour:
@@ -3256,6 +3259,24 @@ GameObject:
   m_PrefabInstance: {fileID: 6804824999488023211}
   m_PrefabAsset: {fileID: 0}
 --- !u!114 &6979801825605942611
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7622714747961784617}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 54ee5d8ee04e28b45bbc82b72ce982f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 1
+  type: 0
+  state: 0
+  image: {fileID: 284321387986046226}
+  percentField: {fileID: 0}
+  widthValue: 270
+--- !u!114 &6810223685173868243
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
