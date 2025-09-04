@@ -275,11 +275,15 @@ public class GameManager : MonoBehaviour
     }
 
     public void ShowOutro() {
+        CancelInvoke();
         outro.gameObject.SetActive(true);
+        outro.Play("Entry", 0, 0);
         Invoke(nameof(CloseOutro), GameManager.Instance.settings.timeForSummary);
     }
 
-    void CloseOutro() {
+    void CloseOutro()
+    {
+        CancelInvoke();
         outro.Play("Exit", 0, 0);
         GameManager.Instance.Invoke(nameof(GameManager.Instance.Restart),1f);
     }
