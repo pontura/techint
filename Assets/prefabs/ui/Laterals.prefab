@@ -10154,7 +10154,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "SomosTechint #Pasi\xF3nPorHacer"
+  m_text: "#SomosTechint #Pasi\xF3nPorHacer"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 98c5fbb34759685498719d8870c5e8ef, type: 2}
   m_sharedMaterial: {fileID: 9046989880593377113, guid: 98c5fbb34759685498719d8870c5e8ef, type: 2}
@@ -20313,7 +20313,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "SomosTechint #Pasi\xF3nPorHacer"
+  m_text: "#SomosTechint #Pasi\xF3nPorHacer"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 98c5fbb34759685498719d8870c5e8ef, type: 2}
   m_sharedMaterial: {fileID: 9046989880593377113, guid: 98c5fbb34759685498719d8870c5e8ef, type: 2}
