@@ -18,4 +18,5 @@ public static class Events
     public static System.Action OnPipeRotate = delegate { };
     public static System.Action<bool> PhotoOpportunityShow = delegate { };
     public static System.Action IsInactive = delegate { };
+    public static System.Action<System.Action<bool>> OnClickTimerSet = delegate { };
 }

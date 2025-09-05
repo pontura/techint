@@ -7,7 +7,6 @@ public class GameManager : MonoBehaviour
 {
     [SerializeField] GameUI ui;
     [SerializeField] TMPro.TMP_Text field;
-    [SerializeField] Animator outro;
     InputManager inputManager;
     public states state;
     public int levelId = 0;
@@ -276,20 +275,5 @@ public class GameManager : MonoBehaviour
 
     public void GameIsInactive() {
         Events.PhotoOpportunityShow(true);
-    }
-
-    public void ShowOutro() {
-        CancelInvoke();
-        outro.gameObject.SetActive(true);
-        outro.Play("Entry", 0, 0);
-        Invoke(nameof(CloseOutro), settings.timeForSummary);
-    }
-
-    void CloseOutro()
-    {
-        CancelInvoke();
-        outro.Play("Exit", 0, 0);
-        GameIsInactive();
-        //GameManager.Instance.Invoke(nameof(GameIsInactive),1f);
-    }
+    }   
 }

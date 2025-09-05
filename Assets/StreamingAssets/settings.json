@@ -2,6 +2,7 @@
 	"ip": "192.168.1.17",
 	"click_delay_filter": 0.5,
 	"inactive_thresh":60,
+	"click_timer":2,
 	"timeForSummary":5,	
 	"time_game_1":30,	
 	"time_game_2":30,	

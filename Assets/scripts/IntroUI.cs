@@ -8,25 +8,55 @@ public class IntroUI : ButtonLidar
 
     int _index;
 
+    [SerializeField] bool _lock;
+
+    private void Start() {
+        Events.PhotoOpportunityShow += Show;
+    }
+
+    private void OnDestroy() {
+        Events.PhotoOpportunityShow -= Show;
+    }
+
+    void Show(bool enable) {
+        gameObject.SetActive(!enable);
+    }
+
+    private void OnEnable() {
+        Reset();
+    }
+
     public override void OnClicked()
     {
         print("OnClicked");
+        if (_lock || !gameObject.activeSelf)
+                return;
         YaguarLib.Events.Events.OnPlaySoundInChannel(YaguarLib.Audio.AudioManager.types.CLICK_NEUTRAL,YaguarLib.Audio.AudioManager.channels.UI);
         if (_index < GameManager.Instance.settings.intro_texts.Length) {
+            Events.OnClickTimerSet((state) => _lock = state);
             textAnim.Play("introTextEntry", 0, 0);
             title.text = GameManager.Instance.settings.intro_texts[_index];
-            _index++;
+            _index++;            
         } else {
-            GameManager.Instance.InitGame();            
-            title.text = GameManager.Instance.settings.intro_texts[0];
-            _index = 1;
+            GameManager.Instance.InitGame();
         }
 
     }
+
+    void Reset() {
+        if (GameManager.Instance!=null) {
+            title.text = GameManager.Instance.settings.intro_texts[0];
+            _index = 1;
+            Events.OnClickTimerSet((state) => _lock = state);
+        }
+    }
+
     public void Init()
     {
+        Debug.Log("#Intro Init");
         title.text = GameManager.Instance.settings.intro_texts[_index];
         YaguarLib.Events.Events.OnPlaySoundInChannel(YaguarLib.Audio.AudioManager.types.SIGNAL_ENTRY, YaguarLib.Audio.AudioManager.channels.GAME);
         _index++;
+        Events.OnClickTimerSet((state) => _lock = state);
     }
 }

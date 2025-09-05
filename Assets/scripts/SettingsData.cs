@@ -12,6 +12,7 @@ public class SettingsData
 
     public string ip;
     public float inactive_thresh;
+    public float click_timer;
 
     public string intro_title;
 
