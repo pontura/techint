@@ -162,6 +162,7 @@ GameObject:
   - component: {fileID: 6526712942815781040}
   - component: {fileID: 6725823099872020410}
   - component: {fileID: 1656726171309103666}
+  - component: {fileID: 7937702417058457690}
   m_Layer: 5
   m_Name: logo (3)
   m_TagString: Untagged
@@ -240,6 +241,23 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_ShowMaskGraphic: 1
+--- !u!111 &7937702417058457690
+Animation:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2710440313286170569}
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Animation: {fileID: 7400000, guid: 82391bf434ea72f4ab7f818db91c136e, type: 2}
+  m_Animations:
+  - {fileID: 7400000, guid: 82391bf434ea72f4ab7f818db91c136e, type: 2}
+  m_WrapMode: 0
+  m_PlayAutomatically: 1
+  m_AnimatePhysics: 0
+  m_UpdateMode: 0
+  m_CullingType: 0
 --- !u!1 &2968385098493847807
 GameObject:
   m_ObjectHideFlags: 0
@@ -251,7 +269,7 @@ GameObject:
   - component: {fileID: 3584211350185926256}
   - component: {fileID: 9160433677154838093}
   - component: {fileID: 1206174680194309473}
-  - component: {fileID: 4143385945819148007}
+  - component: {fileID: 2144978029775752337}
   m_Layer: 5
   m_Name: logotypes
   m_TagString: Untagged
@@ -319,23 +337,28 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!111 &4143385945819148007
-Animation:
+--- !u!95 &2144978029775752337
+Animator:
+  serializedVersion: 7
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2968385098493847807}
   m_Enabled: 1
-  serializedVersion: 4
-  m_Animation: {fileID: 7400000, guid: f024babe8b548de408d219380431e878, type: 2}
-  m_Animations:
-  - {fileID: 7400000, guid: f024babe8b548de408d219380431e878, type: 2}
-  m_WrapMode: 0
-  m_PlayAutomatically: 1
-  m_AnimatePhysics: 0
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 96d386c21e30f6143be4c80215ccb2da, type: 2}
+  m_CullingMode: 0
   m_UpdateMode: 0
-  m_CullingType: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &4971555220049459367
 GameObject:
   m_ObjectHideFlags: 0
@@ -348,6 +371,7 @@ GameObject:
   - component: {fileID: 5321186897113440309}
   - component: {fileID: 4637954320680365621}
   - component: {fileID: 3022381571136540828}
+  - component: {fileID: 7249402541401167058}
   m_Layer: 5
   m_Name: logo (1)
   m_TagString: Untagged
@@ -426,6 +450,23 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_ShowMaskGraphic: 1
+--- !u!111 &7249402541401167058
+Animation:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4971555220049459367}
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Animation: {fileID: 7400000, guid: 82391bf434ea72f4ab7f818db91c136e, type: 2}
+  m_Animations:
+  - {fileID: 7400000, guid: 82391bf434ea72f4ab7f818db91c136e, type: 2}
+  m_WrapMode: 0
+  m_PlayAutomatically: 1
+  m_AnimatePhysics: 0
+  m_UpdateMode: 0
+  m_CullingType: 0
 --- !u!1 &5196466167177501250
 GameObject:
   m_ObjectHideFlags: 0
@@ -438,6 +479,7 @@ GameObject:
   - component: {fileID: 2382583757441425092}
   - component: {fileID: 3743022863946555715}
   - component: {fileID: 4936203370514125583}
+  - component: {fileID: 1122951042867383921}
   m_Layer: 5
   m_Name: logo (2)
   m_TagString: Untagged
@@ -516,6 +558,23 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_ShowMaskGraphic: 1
+--- !u!111 &1122951042867383921
+Animation:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5196466167177501250}
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Animation: {fileID: 7400000, guid: 82391bf434ea72f4ab7f818db91c136e, type: 2}
+  m_Animations:
+  - {fileID: 7400000, guid: 82391bf434ea72f4ab7f818db91c136e, type: 2}
+  m_WrapMode: 0
+  m_PlayAutomatically: 1
+  m_AnimatePhysics: 0
+  m_UpdateMode: 0
+  m_CullingType: 0
 --- !u!1 &9017779382865333606
 GameObject:
   m_ObjectHideFlags: 0
