@@ -110,9 +110,10 @@ public class GameManager : MonoBehaviour
         //-1 to 1:
         Vector2 pos = NormalizedToScreenPos(_pos);
 
-       // print(pos + " new: " + _pos);
+        // print(pos + " new: " + _pos);
 
-        if (pos.x<Screen.width/2)
+        // if (pos.x<Screen.width/2)
+        if (pos.x < 2640 / 2)
             InitDebugClick(1, pos);
         else
             InitDebugClick(2, pos);
@@ -148,8 +149,8 @@ public class GameManager : MonoBehaviour
         //if (state == states.intro)
         //    InitGame();
         //else 
-        if (state == states.calibrate)
-            uiManager.CalibrateClicked(inputManager.pos1);
+      ////  if (state == states.calibrate)
+          //  uiManager.CalibrateClicked(inputManager.pos1);
         //else if (state == states.summary)
         //    Intro();
     }
