@@ -11,15 +11,15 @@ public class Game1 : Gameplay
 
     public override void InitGame()
     {
-        items = new List<int>();
+       // items = new List<int>();
         id = 0;
         int a = 0;
         for (a = 0; a < slots.Count; a++)
         {
             slots[a].Inactive();
-            items.Add(a);
+            //items.Add(a);
         }
-        YaguarLib.Xtras.Utils.Shuffle(items);
+       // YaguarLib.Xtras.Utils.Shuffle(items);
 
         a = 0;
         foreach (SimpleButton sb in buttons)

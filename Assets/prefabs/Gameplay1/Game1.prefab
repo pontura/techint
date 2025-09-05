@@ -5430,13 +5430,14 @@ GameObject:
   - component: {fileID: 2223752777184904491}
   - component: {fileID: 3592381196019671844}
   - component: {fileID: 8370121616738746450}
+  - component: {fileID: 1152512585361713767}
   m_Layer: 5
   m_Name: Game1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &2223752777184904491
 RectTransform:
   m_ObjectHideFlags: 0
@@ -5477,7 +5478,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerID: 1
-  items: 
+  items: 02000000010000000300000005000000000000000400000006000000
   slotContainer: {fileID: 7026810390844875589}
   slots:
   - {fileID: 7174034850338096482}
@@ -5517,6 +5518,37 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &1152512585361713767
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8579786157957237563}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 744cb367740cc504886c7f4d8d162220, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerID: 1
+  items: 02000000010000000300000005000000000000000400000006000000
+  slotContainer: {fileID: 7026810390844875589}
+  slots:
+  - {fileID: 7174034850338096482}
+  - {fileID: 2453734711644191994}
+  - {fileID: 4138732043362421237}
+  - {fileID: 3725621841313238136}
+  - {fileID: 1690451962650696271}
+  - {fileID: 8497160895519253845}
+  - {fileID: 718897960048174762}
+  buttons:
+  - {fileID: 2327495771029573020}
+  - {fileID: 2837142160978249811}
+  - {fileID: 4433756932086053297}
+  - {fileID: 1585430115598770377}
+  - {fileID: 5444715510580415641}
+  - {fileID: 5009393604636409440}
+  - {fileID: 9173872322081402738}
 --- !u!1 &8907058095429836207
 GameObject:
   m_ObjectHideFlags: 0
