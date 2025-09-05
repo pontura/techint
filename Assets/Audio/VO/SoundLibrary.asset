@@ -1,0 +1,46 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 04cc9302f07e2ce4494c8a7ffe15d372, type: 3}
+  m_Name: SoundLibrary
+  m_EditorClassIdentifier: 
+  audioClips:
+  - key: intro_1
+    clip: {fileID: 8300000, guid: 44fa0816b02f14a4d922a7a5f6afd6f3, type: 3}
+    vol: 1
+  - key: intro_2
+    clip: {fileID: 8300000, guid: be33918e88e1a6c49aea713263acf2e1, type: 3}
+    vol: 1
+  - key: level_1_1
+    clip: {fileID: 8300000, guid: be33918e88e1a6c49aea713263acf2e1, type: 3}
+    vol: 1
+  - key: win_1
+    clip: {fileID: 8300000, guid: bdab6096c5b2fa249b0fff50db2cbb8c, type: 3}
+    vol: 1
+  - key: level_2_1
+    clip: {fileID: 8300000, guid: 09268fb8cc3341a409424e4f835409ef, type: 3}
+    vol: 1
+  - key: win_2
+    clip: {fileID: 8300000, guid: 289bdb52ade036e4ebf557d89747e881, type: 3}
+    vol: 1
+  - key: level_3_1
+    clip: {fileID: 8300000, guid: d0b9a0808d681294daafe6f312e54208, type: 3}
+    vol: 1
+  - key: win_3
+    clip: {fileID: 8300000, guid: 0b422680f7729ef479ea4a6e2db3edee, type: 3}
+    vol: 1
+  - key: gameEnd_win
+    clip: {fileID: 8300000, guid: cd5a221fd5277c749888fd9c2547c0c4, type: 3}
+    vol: 1
+  vo_win: []
+  vo_correct: []
+  vo_wrong: []
+  audioClipGroups: []

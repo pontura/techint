@@ -2,6 +2,7 @@ using System.Collections.Generic;
 using System.IO;
 using UnityEngine;
 using UnityEngine.EventSystems;
+using YaguarLib.Audio;
 
 public class GameManager : MonoBehaviour
 {
@@ -28,6 +29,8 @@ public class GameManager : MonoBehaviour
 
     public ClickPointer debugClick1;
     public ClickPointer debugClick2;
+
+    [SerializeField] SoundLibrary soundLibrary;
 
     public static GameManager Instance
     {
@@ -195,6 +198,8 @@ public class GameManager : MonoBehaviour
         string lose = GameManager.Instance.settings.lose[GameManager.Instance.levelId];
         int duration = GameManager.Instance.settings.winDuration;
 
+        PlayVoiceOver("win_" + (levelId + 1));
+
         if (player == 0)//empate
         {
             Events.OnSignalByPlayer(lose, 0, duration, ()=>Invoke(nameof(NextGame), GameManager.Instance.settings.winSignalsDelay)); 
@@ -223,7 +228,7 @@ public class GameManager : MonoBehaviour
         levelId++;
         print("ReadyForNextGame " + levelId);
         ui.SetGamePlay(levelId);
-        Events.OnInitLevel(levelId);
+        Events.OnInitLevel(levelId);        
     }
     void OnNext()
     {
@@ -277,4 +282,12 @@ public class GameManager : MonoBehaviour
     public void GameIsInactive() {
         Events.PhotoOpportunityShow(true);
     }   
+
+    public void PlayVoiceOver(string key) {
+        Debug.Log("#PlayVoiceOver: " + key);
+        ClipData clipData = soundLibrary.GetClip(key);
+        if (clipData != null) {
+            AudioManager.Instance.PlaySound(clipData.clip, AudioManager.channels.VOICES, clipData.vol);
+        }
+    }
 }

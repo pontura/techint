@@ -1922,6 +1922,7 @@ MonoBehaviour:
     trivias: []
   debugClick1: {fileID: 932348446}
   debugClick2: {fileID: 1457652440}
+  soundLibrary: {fileID: 11400000, guid: 9f34b3d5d7726cb41ae1443b91853d90, type: 2}
 --- !u!114 &1109424222
 MonoBehaviour:
   m_ObjectHideFlags: 0

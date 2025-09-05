@@ -14,6 +14,8 @@ public class GameEnd : Gameplay
         else
             GetComponent<Animator>().Play("lose");
 
+        GameManager.Instance.PlayVoiceOver("gameEnd_win");
+
         foreach (TMPro.TMP_Text t in titles)
         {
             if (winner == playerID)

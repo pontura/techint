@@ -35,6 +35,7 @@ public class GameUI : MonoBehaviour
         string[] title = GameManager.Instance.settings.GetTitle(levelID);
         int delay_to_read_gameTitle = GameManager.Instance.settings.delay_to_read_gameTitle;
         Debug.Log("SetTutorial: " + levelID + " " + titleIndex);
+        GameManager.Instance.PlayVoiceOver("level_" + (levelID + 1) + "_" + (titleIndex+1));
         System.Action doNext = titleIndex < title.Length-1 ?
             () => {
                 titleIndex++;

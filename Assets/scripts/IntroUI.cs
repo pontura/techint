@@ -36,7 +36,8 @@ public class IntroUI : ButtonLidar
             Events.OnClickTimerSet((state) => _lock = state);
             textAnim.Play("introTextEntry", 0, 0);
             title.text = GameManager.Instance.settings.intro_texts[_index];
-            _index++;            
+            _index++;
+            GameManager.Instance.PlayVoiceOver("intro_"+_index);
         } else {
             GameManager.Instance.InitGame();
         }
@@ -47,6 +48,7 @@ public class IntroUI : ButtonLidar
         if (GameManager.Instance!=null) {
             title.text = GameManager.Instance.settings.intro_texts[0];
             _index = 1;
+            GameManager.Instance.PlayVoiceOver("intro_" + _index);
             Events.OnClickTimerSet((state) => _lock = state);
         }
     }
@@ -57,6 +59,7 @@ public class IntroUI : ButtonLidar
         title.text = GameManager.Instance.settings.intro_texts[_index];
         YaguarLib.Events.Events.OnPlaySoundInChannel(YaguarLib.Audio.AudioManager.types.SIGNAL_ENTRY, YaguarLib.Audio.AudioManager.channels.GAME);
         _index++;
+        GameManager.Instance.PlayVoiceOver("intro_" + _index);
         Events.OnClickTimerSet((state) => _lock = state);
     }
 }
