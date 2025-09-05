@@ -4,7 +4,7 @@ using UnityEngine;
 public class InputManager : MonoBehaviour
 {
     GameManager gameManager;
-    public Vector2 pos1;
+  //  public Vector2 pos1;
     public float offset_x = 0.26f;
     public float offset_multiplier = 2.6f;
 
@@ -62,7 +62,7 @@ public class InputManager : MonoBehaviour
             }
             p2_timer_click = Time.time;
         }
-        this.pos1 = pos;
+      //  this.pos1 = pos;
         gameManager.OnHit(pos);
     }
 
