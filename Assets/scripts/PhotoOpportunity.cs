@@ -23,10 +23,11 @@ public class PhotoOpportunity : ButtonLidar
 
     public void Show(bool enable) {
         gameObject.SetActive(enable);
+        YaguarLib.Audio.AudioManager.Instance.SfxEnable(!enable);
         string animName = enable ? "Entry" : "Exit";
         anim.Play(animName, 0, 0);
         if (enable) {
-            YaguarLib.Audio.AudioManager.Instance.PlaySound(YaguarLib.Audio.AudioManager.Instance.GetAudio(YaguarLib.Audio.AudioManager.types.OPPORTUNITY).clip, channel: YaguarLib.Audio.AudioManager.channels.MUSIC, loop: true);
+            YaguarLib.Audio.AudioManager.Instance.PlaySound(YaguarLib.Audio.AudioManager.Instance.GetAudio(YaguarLib.Audio.AudioManager.types.OPPORTUNITY).clip, channel: YaguarLib.Audio.AudioManager.channels.MUSIC, loop: true);            
             video.Play();
             Events.OnClickTimerSet((state) => _lock = state);
         } else {
