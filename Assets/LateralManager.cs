@@ -26,13 +26,13 @@ public class LateralManager : MonoBehaviour
     }
     private void OnInitLevel(int levelID)
     {
+        Debug.Log("#OnInitLevel");
         Reset();
-        foreach (GameObject go in games) go.SetActive(false);
         gameIntros[levelID].SetActive(true);
     }
     private void OnInitPlayingLevel() {
+        Debug.Log("#OnInitPlayingLevel");
         Reset();
-        foreach (GameObject go in games) go.SetActive(false);
         games[GameManager.Instance.levelId].SetActive(true);
     }
     private void OnExitLevel()
