@@ -81,7 +81,7 @@ public class LateralsManager : MonoBehaviour
         List<TMPro.TMP_Text> fields = new();
         foreach (GameObject go in gos) {
             fields.AddRange(go.GetComponentsInChildren<TMPro.TMP_Text>().ToList());
-            go.SetActive(true);
+            //go.SetActive(true); Lo prende LateralManager
         }
 
         if (fields != null) {
