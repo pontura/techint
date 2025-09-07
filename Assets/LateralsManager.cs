@@ -36,12 +36,14 @@ public class LateralsManager : MonoBehaviour
         Events.OnWinLevel += OnWinLevel;
         Events.OnInitLevel += OnInitLevel;
         Events.OnExitLevel += OnExitLevel;
+        Events.OnRestart += Reset;
     }
     void OnDestroy()
     {
         Events.OnWinLevel = OnWinLevel;
         Events.OnInitLevel -= OnInitLevel;
         Events.OnExitLevel -= OnExitLevel;
+        Events.OnRestart -= Reset;
     }
     private void OnInitLevel(int levelID)
     {

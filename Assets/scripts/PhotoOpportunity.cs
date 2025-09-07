@@ -20,8 +20,10 @@ public class PhotoOpportunity : ButtonLidar
     private void OnDestroy() {
         Events.PhotoOpportunityShow -= Show;
     }
-
     public void Show(bool enable) {
+        print("Show intro " + enable);
+        if (enable && gameObject.activeSelf) return;
+        print("Show ok");
         gameObject.SetActive(enable);
         YaguarLib.Audio.AudioManager.Instance.SfxEnable(!enable);
         string animName = enable ? "Entry" : "Exit";

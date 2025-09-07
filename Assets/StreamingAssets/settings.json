@@ -16,7 +16,7 @@
 	"slot6":"Prepará el terreno para la fundación de todos los equipos. Seleccioná la máquina para alisarlo.",
 	"slot7":"Iluminá la zona para que el equipo del turno noche trabaje en condiciones adecuadas.",
 
-	"intro_texts":["¡Te damos la bienvenida!","Techint E&C, Tecpetrol y Tenaris hacen sinergia para desarrollar el potencial de Vaca Muerta en su máxima expresión.","La realización de un proyecto de esta magnitud requiere de expertos y tecnología avanzada.","¡Ayudanos a ponerla en marcha!"],
+	"intro_texts":["¡Te damos la bienvenida!","Techint E&C, Tecpetrol y Tenaris hacen sinergia para desarrollar el potencial de Vaca Muerta en su máxima expresión."],
 	"level_3_laterals":["Desarrollo de expertise local","Costos operativos optimizados","Calidad y provisión aseguradas","Optimización de stock"],
 
 	"level_1_laterals_win":["<color=#00a551><b><size=130%>80 años</size></b></color> de experiencia alrededor del mundo.","Innovación aplicada en todos nuestros proyectos.","No dejamos ninguna obra sin terminar.","<color=#c53d95><b><size=130%>+3500</size></b></color> proyectos concretados exitosamente a nivel internacional.","Hacemos realidad los proyectos más desafiantes.","Visión global, presencia local.","<color=#00a551><b><size=130%>+18.000</size></b></color> colaboradores y colaboradoras en todo el mundo.","<color=#c53d95><b><size=130%>+1.9 millones</size></b></color> de horas de ingeniería por año."],
@@ -26,7 +26,7 @@
 	"delay_to_read_gameTitle":6,	
 	"timeOverDuration":2,	
 	"winDuration":3.5,
-	"winSignalsDelay":4.5,
+	"winSignalsDelay":8,
 	"win": ["¡Buen trabajo! Construiste la planta que procesará el gas de Vaca Muerta.","¡Bien hecho! Mantuviste los parámetros óptimos de perforación.","¡Buen trabajo, el gasoducto está listo!"],
 	"lose": [":(","¡Ups!","¡Ouch!"],
 	"timeOver": "¡Tiempo!",

@@ -68,8 +68,6 @@ public class GameManager : MonoBehaviour
     }
     void Init()
     {
-        score_player1 = 0;
-        score_player2 = 0;
         uiManager.Init();
         Intro();
     }
@@ -159,6 +157,8 @@ public class GameManager : MonoBehaviour
     }
     public void Intro()
     {
+        score_player1 = 0;
+        score_player2 = 0;
         field.gameObject.SetActive(false);
        // Cursor.visible = true;
         state = states.intro;
@@ -268,6 +268,7 @@ public class GameManager : MonoBehaviour
     }
     public void Restart()
     {
+        Events.OnRestart();
         Intro();
     }
     public int GetWinner()

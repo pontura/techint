@@ -16,6 +16,7 @@ public class LateralManager : MonoBehaviour
         Events.OnInitLevel += OnInitLevel;
         Events.OnExitLevel += OnExitLevel;
         Events.OnInitPlayingLevel += OnInitPlayingLevel;
+        Events.OnRestart += Reset;
     }
     void OnDestroy()
     {
@@ -23,6 +24,7 @@ public class LateralManager : MonoBehaviour
         Events.OnInitLevel -= OnInitLevel;
         Events.OnExitLevel -= OnExitLevel;
         Events.OnInitPlayingLevel -= OnInitPlayingLevel;
+        Events.OnRestart -= Reset;
     }
     private void OnInitLevel(int levelID)
     {

@@ -8,8 +8,10 @@ public static class Events
     public static System.Action<string, int, System.Action> OnSignal = delegate { };
     public static System.Action<string, int, System.Action> OnSignalRefresh = delegate { };
     public static System.Action<string, int, int, System.Action> OnSignalByPlayer = delegate { };
+
     public static System.Action<int> OnWinLevel = delegate { };
     public static System.Action OnExitLevel = delegate { };
+    public static System.Action OnRestart = delegate { };
     public static System.Action<int> OnInitLevel = delegate { };
     public static System.Action OnInitPlayingLevel = delegate { };
     public static System.Action TimeOver = delegate { };
