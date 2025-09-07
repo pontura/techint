@@ -31,7 +31,7 @@
 	"lose": [":(","¡Ups!","¡Ouch!"],
 	"timeOver": "¡Tiempo!",
 	"intro_title": "¡Te damos la bienvenida!",
-	"level_1_title": ["El equipo de ingeniería de Techint E&C diseñó una planta de procesamiento de gas (CPF) y el ruteo de los ductos que entran y salen de la planta.","Ahora es tu turno de contribuir con su construcción y ponerla en marcha en tiempo récord."],
+	"level_1_title": ["El equipo de ingenieros e ingenieras de Techint E&C diseñó una planta de procesamiento de gas y el ruteo de los ductos que entran y salen de la planta.","Ahora es tu turno de contribuir con su construcción y ponerla en marcha en tiempo récord."],
 	"level_2_title": ["Desde la sala de control de Tecpetrol, direccioná la perforación del pozo para extraer el gas."],
 	"level_3_title": ["¡Es hora de evacuar el gas! Conectá los tubos de Tenaris para transportar la energía de Vaca Muerta a los hogares e industrias de nuestro país."],
 	
@@ -39,7 +39,7 @@
 	"gameEnd_lose": "¡Upsss, te faltó energía! La próxima será.",	
 	"gameEnd_draw": "Empataron...",	
 	
-	"triviaSpeed": 2,	
+	"triviaSpeed": 2,
 	"trivias":
 	[
 		{
